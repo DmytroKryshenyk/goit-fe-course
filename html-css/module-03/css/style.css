@@ -1,5 +1,64 @@
 * {
 	margin: 0;
 	padding:0;
-	box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Pathway Gothic One';
+}
+
+.wrapper {
+    background: rgb(221, 255, 129);
+    width: 480px; 
+    padding: 37px;
+    margin: auto;
+}
+
+.agency-profile {
+    background: #a3c7be
+}
+
+.agency-profile-title {
+    color: #263555;
+    margin-bottom: 7%;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.agency-profile-image {
+    margin-bottom: 7%;
+}
+
+.agency-profile-subtitle {
+    color: #263555;
+    margin-bottom: 4%;
+}
+
+.principles {
+    padding-top: 10%;
+    background: #c7c3a3;
+}
+
+.principles-title {
+    color: #263555;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.principles-list {
+    list-style-type: none;
+    margin-bottom: 7%;
+    padding-right: 10%;
+}
+
+.principles-list:last-child {
+    margin-bottom: 0;
+}
+
+.principles-list-title {
+    margin-bottom: 4%;
+    color: #263555;
+}
+
+.principles-list-text {
+
 }
