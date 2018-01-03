@@ -1,64 +1,99 @@
 * {
-	margin: 0;
-	padding:0;
-    box-sizing: border-box;
-    font-family: 'Pathway Gothic One';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pathway Gothic One";
+}
+
+body {
+    background: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    padding-top: 10% ;
+    padding-bottom: 30% ; 
 }
 
 .wrapper {
-    background: rgb(221, 255, 129);
-    width: 480px; 
-    padding: 37px;
-    margin: auto;
-}
-
-.agency-profile {
-    background: #a3c7be
+  background:white;
+  width: 480px;
+  padding: 37px;
+  margin: auto;
 }
 
 .agency-profile-title {
-    color: #263555;
-    margin-bottom: 7%;
-    text-transform: uppercase;
-    font-weight: 500;
+  color: #263555;
+  margin-bottom: 7%;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .agency-profile-image {
-    margin-bottom: 7%;
+  margin-bottom: 7%;
 }
 
 .agency-profile-subtitle {
-    color: #263555;
-    margin-bottom: 4%;
+  color: #263555;
+  margin-bottom: 4%;
 }
 
 .principles {
-    padding-top: 10%;
-    background: #c7c3a3;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  border-bottom: 1px solid #dedbdb;
 }
 
 .principles-title {
-    color: #263555;
-    margin-bottom: 5%;
-    text-transform: uppercase;
-    font-weight: 500;
+  color: #263555;
+  margin-bottom: 5%;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .principles-list {
-    list-style-type: none;
-    margin-bottom: 7%;
-    padding-right: 10%;
+  list-style-type: none;
+  margin-bottom: 7%;
+  padding-right: 10%;
 }
 
 .principles-list:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .principles-list-title {
-    margin-bottom: 4%;
-    color: #263555;
+  margin-bottom: 4%;
+  color: #263555;
 }
 
-.principles-list-text {
+.offer {
+  padding-top: 10%;
+}
 
+.offer-title {
+  color: #263555;
+  margin-bottom: 5%;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.offer-subtitle {
+  color: #263555;
+  margin-bottom: 4%;
+}
+
+.offer-text {
+  margin-bottom: 5%;
+}
+
+.offer-list {
+  column-count: 2;
+  padding-left: 7%;
+  list-style-type: none;
+  font-weight: bold;
+  color: #263555;
+}
+
+.offer-list-li {
+  padding-bottom: 7%;
+  display: inline-block; /*Задав це для того, щоб другу колонку вирівняти по вертикалі*/
 }
