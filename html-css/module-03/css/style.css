@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Pathway Gothic One";
 }
 
 body {
@@ -26,6 +25,7 @@ body {
   margin-bottom: 7%;
   text-transform: uppercase;
   font-weight: 500;
+  font-family: "Pathway Gothic One";
 }
 
 .agency-profile-image {
@@ -35,10 +35,15 @@ body {
 .agency-profile-subtitle {
   color: #263555;
   margin-bottom: 4%;
+  font-family: "Pathway Gothic One";
+}
+
+.agency-profile-text {
+  font-family: 'Economica', sans-serif;
 }
 
 .principles {
-  padding-top: 10%;
+  margin-top: 10%;
   padding-bottom: 10%;
   border-bottom: 1px solid #dedbdb;
 }
@@ -48,25 +53,34 @@ body {
   margin-bottom: 5%;
   text-transform: uppercase;
   font-weight: 500;
+  font-family: "Pathway Gothic One";
 }
 
 .principles-list {
   list-style-type: none;
-  margin-bottom: 7%;
   padding-right: 10%;
 }
 
-.principles-list:last-child {
+.principles-list-li {
+  margin-bottom: 7%;
+}
+
+.principles-list-li:last-child {
   margin-bottom: 0;
 }
 
 .principles-list-title {
-  margin-bottom: 4%;
+  margin-bottom: 3%;
   color: #263555;
+  font-family: "Pathway Gothic One";
+}
+
+.principles-list-text {
+  font-family: 'Economica', sans-serif;
 }
 
 .offer {
-  padding-top: 10%;
+  margin-top: 10%;
 }
 
 .offer-title {
@@ -74,15 +88,18 @@ body {
   margin-bottom: 5%;
   text-transform: uppercase;
   font-weight: 500;
+  font-family: "Pathway Gothic One";
 }
 
 .offer-subtitle {
   color: #263555;
   margin-bottom: 4%;
+  font-family: "Pathway Gothic One";
 }
 
 .offer-text {
   margin-bottom: 5%;
+  font-family: 'Economica', sans-serif;
 }
 
 .offer-list {
@@ -91,9 +108,10 @@ body {
   list-style-type: none;
   font-weight: bold;
   color: #263555;
+  font-family: 'Economica', sans-serif;
 }
 
 .offer-list-li {
-  padding-bottom: 7%;
+  margin-bottom: 7%;
   display: inline-block; /*Задав це для того, щоб другу колонку вирівняти по вертикалі*/
 }
