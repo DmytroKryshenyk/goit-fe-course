@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  padding-top: 10%;
+  padding-bottom: 30%;
+  font-size: 16px;
+}
+.wrapper {
+  background: white;
+  width: 1020px;
+  padding: 120px 60px 80px 60px;
+  margin: auto;
+  background: lightsalmon;
+}
+
+.agency-profile {
+  width: 70%;
+  background: lightblue;
+  display: inline-block;
+}
+
+.agency-profile-title {
+  color: #263555;
+  text-transform: uppercase;
+  font-family: "Pathway Gothic One";
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+
+.agency-profile-image {
+  float: left;
+  margin-right: 3%;
+  margin-bottom: 2%;
+}
+
+.agency-profile-subtitle {
+  color: #263555;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin-bottom: 2%;
+  line-height: 1.5;
+}
+
+.agency-profile-text {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4e5050;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.principles {
+  width: 30%;
+  background: lightgreen;
+  display: inline-block;
+  margin-left: -4px;
+  vertical-align: top;
+}
+
+.principles-title {
+  color: #263555;
+  text-transform: uppercase;
+  font-family: "Pathway Gothic One";
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+
+.principles-list {
+  list-style-type: none;
+  -padding-right: 10%;
+  padding-left: 15%;
+}
+
+.principles-list-li {
+  -margin-bottom: 7%;
+}
+
+.principles-list-li:last-child {
+  -margin-bottom: 0;
+}
+
+.principles-list-title {
+  margin-bottom: 3%;
+  color: #263555;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.principles-list-text {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4e5050;
+  font-size: 13px;
+  line-height: 1.5;
+}
