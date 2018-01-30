@@ -9,21 +9,24 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
-  padding-top: 10%;
-  padding-bottom: 30%;
+  padding-top: 40px;
+  padding-bottom: 60px;
   font-size: 16px;
 }
 .wrapper {
-  background: white;
   width: 1020px;
   padding: 120px 60px 80px 60px;
   margin: auto;
-  background: lightsalmon;
+  background: white;
+}
+
+.agency-profile-and-principles-wrapper {
+  border-bottom: 1px solid #dedbdb;
+  padding-bottom: 50px;
 }
 
 .agency-profile {
   width: 70%;
-  background: lightblue;
   display: inline-block;
 }
 
@@ -44,8 +47,8 @@ body {
 .agency-profile-subtitle {
   color: #263555;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
   margin-bottom: 2%;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -58,10 +61,10 @@ body {
 
 .principles {
   width: 30%;
-  background: lightgreen;
   display: inline-block;
   margin-left: -4px;
   vertical-align: top;
+  padding-left: 5%;
 }
 
 .principles-title {
@@ -74,18 +77,33 @@ body {
 
 .principles-list {
   list-style-type: none;
-  -padding-right: 10%;
   padding-left: 15%;
+  counter-reset: counter-principles;
 }
 
 .principles-list-li {
-  -margin-bottom: 7%;
+  margin-bottom: 12%;
+  position: relative;
 }
 
 .principles-list-li:last-child {
-  -margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+.principles-list-li::before {
+  content: counter(counter-principles)"";
+  counter-increment: counter-principles;
+  width: 25px;
+  height: 25px;
+  color: white;
+  background: #38afe5;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: -40px;
+  text-align: center;
+  line-height: 1.7em;
+}
 .principles-list-title {
   margin-bottom: 3%;
   color: #263555;
@@ -99,4 +117,59 @@ body {
   color: #4e5050;
   font-size: 13px;
   line-height: 1.5;
+}
+
+.offer-and-testimonial-wrapper {
+  padding-top: 50px;
+}
+.offer {
+  width: 70%;
+  display: inline-block;
+  background: lightsalmon;
+}
+
+.offer-title {
+  color: #263555;
+  text-transform: uppercase;
+  font-family: "Pathway Gothic One";
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+
+.offer-subtitle {
+  color: #263555;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 2%;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.offer-text {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4e5050;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.offer-list {
+  column-count: 2;
+  column-gap: 50px;
+}
+
+.offer-list-li {
+  color: #263555;
+  font-family: Arial, Helvetica, sans-serif;
+  -margin-bottom: 2%;
+  font-size: 14px;
+  line-height: 1.5;
+  list-style: none;
+}
+
+.testimonial {
+  width: 30%;
+  display: inline-block;
+  margin-left: -4px;
+  vertical-align: top;
+  padding-left: 5%;
+  background: lightseagreen;
 }
