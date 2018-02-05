@@ -12,18 +12,17 @@ body {
   background-attachment: fixed;
   background-size: 100%;
   font-size: 16px;
-  margin-top: 40px;
-  margin-bottom: 70px;
+  padding-top: 40px;
+  padding-bottom: 70px;
 }
 
 .wrapper {
   width: 1024px;
   margin: auto;
-  border: 3px solid red;
 }
 
 .header {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .header-menu {
@@ -32,6 +31,7 @@ body {
 .header-menu-list {
   text-transform: uppercase;
   text-align: center;
+  padding-top: 55px;
 }
 
 .header-menu-list-li {
@@ -47,6 +47,10 @@ body {
   margin-right: 0;
 }
 
+.header-menu-list-li:nth-child(3) {
+  margin-right: 240px;
+}
+
 .header-links {
   text-decoration: none;
   color: #ffffff;
@@ -59,10 +63,15 @@ body {
   background: #ffffff;
   border-radius: 50%;
   text-align: center;
-  line-height: 2.6; /*Скажи, будь ласка, чи правильно так позиціонувати текст поцентру*/
+  line-height: 140px; /*Скажи, будь ласка, чи правильно так позиціонувати текст поцентру*/
   font-size: 55px;
   color: #263555;
   font-family: dorsa;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 110px;
+  transform: translate(-50%, -50%);
 }
 
 .header-submenu-list {
@@ -94,6 +103,10 @@ body {
   text-decoration: none;
 }
 
+.header-menu-list-li:hover .header-links {
+  color: #263555;
+}
+
 .header-menu-list-li:hover .header-submenu-list {
   display: block;
 }
@@ -102,6 +115,11 @@ body {
   background: #ffffff;
   padding: 55px 60px 130px 60px;
 }
+
+.slider {
+  position:relative;
+}
+
 .carousel {
   width: 100%;
   margin: auto;
@@ -109,53 +127,88 @@ body {
 }
 
 .slick-arrow {
-    width: 100px;
-    height: 100px;
-    background: #38afe5;
-    display: inline-block;
-    position: absolute;
-    z-index: 10;
-    border: 0;
+  width: 100px;
+  height: 100px;
+  background: #38afe5;
+  display: inline-block;
+  position: absolute;
+  z-index: 10;
+  border: 0;
 }
 
 .slick-arrow:hover {
-    background: rgba(212, 229, 56, 1);
- }
+  background: rgba(34, 65, 70, 0.5);
+}
+
+.slick-arrow:focus {
+  outline: none; /*Це написав для того, щоб прибрати дивну рамку при нажиманні на кнопку в браузері хром*/
+}
 
 .slick-prev {
-    height: 100px;
-    width: 50px;
-    bottom: 40px;
-    left:40px;
-    border-radius: 200px 0 0 200px;
-  }
+  height: 100px;
+  width: 50px;
+  bottom: 40px;
+  left: 40px;
+  border-radius: 200px 0 0 200px;
+}
 
-  .slick-next {
-    height: 100px;
-    width: 50px;
-    bottom:40px;
-    left:90px;
-    border-radius: 0 200px 200px 0;
+.slick-next {
+  height: 100px;
+  width: 50px;
+  bottom: 40px;
+  left: 90px;
+  border-radius: 0 200px 200px 0;
+}
 
-  }
+.slick-prev::before {
+  content: "\2b05";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+}
 
-  .slick-prev::before {
-    content: '\2b05'; 
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%); 
-    font-size: 30px;
-    font-weight: bold;
-    color: #ffffff;
-  }
+.slick-next::after {
+  content: "\2b05";
+  position: absolute; /*Зробив для того, щоб змогти розвернути стрілку*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(-1, 1); /*Не нашов в юнікоді стрілку вправо. Тому я взяв ту, що напрялена вліво і розвернув зеркально по вертикалі*/
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+}
 
-  .slick-next::after {
-    content: '\2b05';
-    position: absolute; /*Зробив для того, щоб змогти розвернути стрілку*/
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%) scale(-1, 1); /*Не нашов в юнікоді стрілку вправо. Тому я взяв ту, що напрялена вліво і розвернув зеркально по вертикалі*/
-    font-size: 30px;
-    font-weight: bold;
-    color: #ffffff;
-  }
+.slider-slogan-1 {
+  padding: 20px 15px;
+  background: #ffffff;
+  display: block;
+  font-size: 22px;
+  position: absolute;
+  top: 215px;
+  text-transform: uppercase;
+  color: #263555;
+  font-family: 'Pathway Gothic One';
+  border: 1px solid #ececea;
+}
+
+.slider-slogan-2 {
+  padding: 15px 10px;
+  background: #38afe5;
+  display: block;
+  font-size: 34px;
+  position: absolute;
+  top: 280px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'Pathway Gothic One';
+}
+
+
+.destinations {
+
+}
+
+
