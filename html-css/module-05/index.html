@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dorsa" rel="stylesheet">
+    <title>module-05</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header class="header">
+            <nav class="header-menu">
+                <ul class="header-menu-list">
+                    <li class="header-menu-list-li">
+                        <a class="header-links" href="">Home</a>
+                    </li>
+                    <li class="header-menu-list-li">
+                        <a class="header-links" href="">About</a>
+                        <ul class="header-submenu-list">
+                            <li>
+                                <a class="header-submenu-list-li" href="">Agency</a>
+                            </li>
+                            <li>
+                                <a class="header-submenu-list-li" href="">News</a>
+                            </li>
+                            <li>
+                                <a class="header-submenu-list-li" href="">Team</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-list-li">
+                        <a class="header-links" href="">Gallery</a>
+                    </li>
+                    <li class="header-menu-list-li">
+                        <div class="logo">Journey</div>
+                    </li>
+                    <li class="header-menu-list-li">
+                        <a class="header-links" href="">Tours</a>
+                    </li>
+                    <li class="header-menu-list-li">
+                        <a class="header-links" href="">Blog</a>
+                    </li>
+                    <li class="header-menu-list-li">
+                        <a class="header-links" href="">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-wrapper">
+            <div class="carousel">
+                <div>
+                    <img src="images/carousel-photo-1.png" alt="Carousel image 1">
+                </div>
+                <div>
+                    <img src="images/carousel-photo-2.png" alt="Carousel image 2">
+                </div>
+                <div>
+                    <img src="images/carousel-photo-3.png" alt="Carousel image 1">
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                prevArrow: '<button class="slick-prev"></button>',
+                nextArrow: '<button class="slick-next"></button>',
+            });
+        });
+    </script>
+</body>
+
+</html>

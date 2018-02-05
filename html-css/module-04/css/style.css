@@ -59,6 +59,12 @@ body {
   line-height: 1.5;
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .principles {
   width: 30%;
   display: inline-block;
@@ -120,7 +126,7 @@ body {
 }
 
 .offer-and-testimonial-wrapper {
-  padding-top: 50px;
+  margin-top: 50px;
 }
 .offer {
   width: 70%;
@@ -257,4 +263,9 @@ body {
   font-size: 13px;
   line-height: 1.5;
   text-align: center;
+}
+
+
+.logo {
+  color: #ffffff
 }
