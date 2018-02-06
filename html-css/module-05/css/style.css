@@ -1,3 +1,7 @@
+:root {
+  --main-font-family: "Pathway Gothic One", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -25,9 +29,6 @@ body {
   margin-bottom: 80px;
 }
 
-.header-menu {
-}
-
 .header-menu-list {
   text-transform: uppercase;
   text-align: center;
@@ -37,7 +38,7 @@ body {
 .header-menu-list-li {
   display: inline-block;
   vertical-align: middle;
-  font-family: "Pathway Gothic One", sans-serif;
+  font-family: var(--main-font-family);
   position: relative;
   padding-bottom: 10px; /*Це зробив для того, щоб коли я навожу на кнопку меню і потім веду мишкою вниз до сабменю, то щоб мишка не попадала в пробел між меню і сабменю*/
   margin-right: 50px;
@@ -117,7 +118,7 @@ body {
 }
 
 .slider {
-  position:relative;
+  position: relative;
 }
 
 .carousel {
@@ -190,7 +191,7 @@ body {
   top: 215px;
   text-transform: uppercase;
   color: #263555;
-  font-family: 'Pathway Gothic One';
+  font-family: var(--main-font-family);
   border: 1px solid #ececea;
 }
 
@@ -203,12 +204,79 @@ body {
   top: 280px;
   text-transform: uppercase;
   color: #ffffff;
-  font-family: 'Pathway Gothic One';
+  font-family: var(--main-font-family);
 }
-
 
 .destinations {
-
+  margin-top: 50px;
 }
 
 
+.destinations-title {
+  font-size: 30px;
+  font-family: var(--main-font-family);
+  color: #263555;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.destinations-article {
+  display: inline-block;
+  margin-right: 17px;
+  height: 270px;
+  width: 287px;
+  position: relative;
+}
+
+.destinations-article:last-child {
+  margin-right: 0;
+}
+
+.destinations-article:hover .details-of-destination{
+  display: inline-block;
+}
+
+.details-of-destination {
+  display: none;
+  position: absolute;
+  height: 270px;
+  width: 50%;
+  top: 0;
+  left: 0;
+  background: #193149;
+  padding: 20px 10px;
+}
+.details-title {
+  font-size: 30px;
+  text-align: center;
+  color: #ffffff;
+  font-family: var(--main-font-family);
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+.details-text {
+  color: #cbc6c6;
+  font-family: "Arial";
+  font-size: 9px;
+  line-height: 15.21px;
+  text-transform: none;
+  margin-bottom: 9px;
+  text-align: justify;
+}
+
+.details-button {
+  border-radius: 5px;
+  border: 2px solid #ececea;
+  background: #ffffff;
+  color: #000000;
+  font-size: 12px;
+  font-family: "Arial";
+  padding: 5px 10px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 50%;
+  text-decoration: none;
+}
