@@ -27,6 +27,7 @@ body {
 
 .header {
   margin-bottom: 80px;
+  position: relative;
 }
 
 .header-menu-list {
@@ -71,7 +72,7 @@ body {
   text-transform: uppercase;
   position: absolute;
   left: 50%;
-  top: 110px;
+  top: 0px;
   transform: translate(-50%, -50%);
 }
 

@@ -1,0 +1,35 @@
+:root {
+  --main-text-color: #333333;
+  --main-blue-color: #95e1d3;
+  --main-hover-color: #f38181;
+  --main-hover-color-2: #fce38a;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --font-section-description: "Kaushan Script", cursive;
+  --font-title-and-header: "Montserrat", sans-serif;
+  --font-text: "Roboto", sans-serif;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: auto;
+  background: lightgreen;
+}
+
+.header {
+  background: lightgrey;
+  display: inline-flex;
+}
+
+.logo {
+  font-size: 30px;
+  font-family: var(--font-title-and-header);
+  color: var(--main-blue-color);
+  background: lightpink;
+  justify-content: flex-start;
+}
+
+.header-menu {
+    justify-content: flex-end;
+    background: lightgreen;
+}
