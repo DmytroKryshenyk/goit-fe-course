@@ -1,5 +1,6 @@
 :root {
   --main-text-color: #333333;
+  --main-text-color-2: #999999;
   --main-blue-color: #95e1d3;
   --main-hover-color: #f38181;
   --main-hover-color-2: #fce38a;
@@ -10,10 +11,14 @@
   --font-text: "Roboto", sans-serif;
 }
 
+body {
+  padding-top: 20px;
+  padding-bottom: 90px;
+}
+
 .wrapper {
   width: 1200px;
   margin: auto;
-  padding-top: 20px;
   background: rgb(240, 240, 240);
 }
 
@@ -61,7 +66,6 @@
 }
 
 .services {
-  background: lightcyan;
   margin-top: 130px;
 }
 
@@ -74,13 +78,13 @@
 }
 
 .services-title {
-    font-size: 30px;
-    font-family: var(--font-title-and-header);
-    color: var(--main-text-color);
-    font-weight: 900;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 40px;
+  font-size: 30px;
+  font-family: var(--font-title-and-header);
+  color: var(--main-text-color);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .services-line {
@@ -88,29 +92,90 @@
   border: 1px solid var(--main-hover-color);
   background: var(--main-hover-color);
   margin: auto;
+  margin-bottom: 60px;
 }
 
 .services-article-wrapper {
-  background: lightgoldenrodyellow;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .services-article {
-
+  display: flex;
+  flex-basis: 33.3333%;
+  margin-bottom: 100px;
 }
 
+.services-article:nth-last-child(-n + 3) {
+  /*Так забрав у останніх трьох відступ накінці.*/
+  margin-bottom: 0;
+}
+
+.services-article-icon-wrapper {
+  display: flex;
+  flex: 0 0 80px;
+  justify-content: center;
+  align-items: flex-start;
+}
 
 .services-article-icon {
-
 }
 
 .services-article-title-and-text-wrapper {
-
 }
 
 .services-article-title {
-
+  font-size: 15px;
+  font-family: var(--font-title-and-header);
+  color: var(--main-text-color);
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .services-article-text {
-  
+  font-size: 14px;
+  font-family: var(--font-text);
+  color: var(--main-text-color-2);
+}
+
+.team-cards-wrapper {
+  background: lightblue;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+
+.team-cards {
+  background: lightgoldenrodyellow;
+  flex-basis: 31%;
+}
+
+.team-cards-image-wrapper {
+  border: 1px solid red;
+}
+
+.team-cards-image {
+  width: 100%;
+  display: block; /*Це задав для того, щоб прибрати дивний відступ під картинкою*/
+}
+
+.team-cards-name {
+  font-size: 14px;
+  font-family: var(--font-title-and-header);
+  font-weight: 500;
+  color: var(--main-text-color);
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+}
+
+.team-cards-position {
+  font-size: 15px;
+  font-family: var(--font-text);
+  color: var(--main-text-color-2);
+  font-style: italic;
+  text-align: center;
+  display: block;
+  margin-top: 15px;
 }
