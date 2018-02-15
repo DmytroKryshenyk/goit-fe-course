@@ -13,23 +13,104 @@
 .wrapper {
   width: 1200px;
   margin: auto;
-  background: lightgreen;
+  padding-top: 20px;
+  background: rgb(240, 240, 240);
 }
 
 .header {
-  background: lightgrey;
-  display: inline-flex;
+  display: flex;
 }
 
 .logo {
   font-size: 30px;
   font-family: var(--font-title-and-header);
   color: var(--main-blue-color);
-  background: lightpink;
-  justify-content: flex-start;
+  margin-right: auto; /*Довго мучався і зрозумів, що вроді тільки так можна спозиціонувати один флекс елемент на головній осі вліво коли всі інші спозиціоновані вправо із-за justify-content:flex-end. Вова, так правильно робити?*/
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .header-menu {
-    justify-content: flex-end;
-    background: lightgreen;
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding-top: 10px; /*Таким способом меню в хедері відцентрував. Якщо робив спочобом align-item, то ніяк не міг зробити ширину ссилки на 100%, щоб зробити бордер знизу при ховері*/
+}
+
+.header-menu-list {
+  display: flex;
+  justify-content: flex-end; /*так подвинув все меню вправо*/
+  text-transform: uppercase;
+  height: 100%; /*Зробив для того, щоб бордер знизу впирався в самий низ хедера*/
+}
+
+.header-menu-list-li {
+  flex-basis: 10%;
+  display: flex;
+  justify-content: flex-end; /*подвинув текст в менюшці до краю*/
+}
+
+.header-menu-list-li-link {
+  text-decoration: none;
+  color: var(--main-blue-color);
+  font-family: var(--font-title-and-header);
+}
+
+.header-menu-list-li-link:hover {
+  color: var(--main-hover-color);
+  border-bottom: 2px solid var(--main-hover-color);
+}
+
+.services {
+  background: lightcyan;
+  margin-top: 130px;
+}
+
+.services-description {
+  font-size: 24px;
+  font-family: var(--font-section-description);
+  color: var(--main-text-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.services-title {
+    font-size: 30px;
+    font-family: var(--font-title-and-header);
+    color: var(--main-text-color);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-line {
+  width: 60px;
+  border: 1px solid var(--main-hover-color);
+  background: var(--main-hover-color);
+  margin: auto;
+}
+
+.services-article-wrapper {
+  background: lightgoldenrodyellow;
+}
+
+.services-article {
+
+}
+
+
+.services-article-icon {
+
+}
+
+.services-article-title-and-text-wrapper {
+
+}
+
+.services-article-title {
+
+}
+
+.services-article-text {
+  
 }
