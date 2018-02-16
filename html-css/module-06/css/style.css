@@ -19,7 +19,6 @@ body {
 .wrapper {
   width: 1200px;
   margin: auto;
-  background: rgb(240, 240, 240);
 }
 
 .header {
@@ -43,7 +42,7 @@ body {
 
 .header-menu-list {
   display: flex;
-  justify-content: flex-end; /*так подвинув все меню вправо*/
+  justify-content: flex-end; /*Так подвинув все меню вправо*/
   text-transform: uppercase;
   height: 100%; /*Зробив для того, щоб бордер знизу впирався в самий низ хедера*/
 }
@@ -51,7 +50,7 @@ body {
 .header-menu-list-li {
   flex-basis: 10%;
   display: flex;
-  justify-content: flex-end; /*подвинув текст в менюшці до краю*/
+  justify-content: flex-end; /*Подвинув сам текст в менюшці до краю*/
 }
 
 .header-menu-list-li-link {
@@ -118,12 +117,6 @@ body {
   align-items: flex-start;
 }
 
-.services-article-icon {
-}
-
-.services-article-title-and-text-wrapper {
-}
-
 .services-article-title {
   font-size: 15px;
   font-family: var(--font-title-and-header);
@@ -139,24 +132,19 @@ body {
 }
 
 .team-cards-wrapper {
-  background: lightblue;
   display: flex;
   justify-content: space-between;
   margin-top: 90px;
 }
 
 .team-cards {
-  background: lightgoldenrodyellow;
   flex-basis: 31%;
 }
 
-.team-cards-image-wrapper {
-  border: 1px solid red;
-}
 
 .team-cards-image {
   width: 100%;
-  display: block; /*Це задав для того, щоб прибрати дивний відступ під картинкою*/
+  display: block; /*Це задав для того, щоб прибрати дивний маленький відступ під картинкою*/
 }
 
 .team-cards-name {
@@ -178,4 +166,70 @@ body {
   text-align: center;
   display: block;
   margin-top: 15px;
+}
+
+.team-cards-image-wrapper {
+  transition: transform 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  box-shadow: 0 0 0 0 var(--main-blue-color);
+  position: relative; /*Це поставив тут, бо якщо поставити на картинку, то градіент дивно трясеться при ховері*/
+}
+
+.team-cards-image-wrapper:hover {
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 0 0 var(--main-blue-color);
+}
+
+.team-cards-image-hover-top-layer-icons-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.2s linear 0s;
+}
+
+.team-cards-image-wrapper:hover
+  .team-cards-image-hover-top-layer-icons-wrapper {
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(252, 227, 138, 0.8) 0%,
+    rgba(243, 129, 129, 0.8) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(252, 227, 138, 0.8) 0%,
+    rgba(243, 129, 129, 0.8) 100%
+  );
+  background: -ms-linear-gradient(
+    90deg,
+    rgba(252, 227, 138, 0.8) 0%,
+    rgba(243, 129, 129, 0.8) 100%
+  );
+  opacity: 1;
+}
+
+.team-cards-image-hover-top-layer-icons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-cards-image-hover-top-layer-icons-link {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-hover-color-2);
+  transition: background-color 0.2s linear 0s;
+  margin-right: 1px;
+}
+
+.team-cards-image-hover-top-layer-icons-link:last-child {
+  margin-right: 0;
+}
+
+.team-cards-image-hover-top-layer-icons-link:hover {
+  background-color: var(--main-blue-color);
 }
