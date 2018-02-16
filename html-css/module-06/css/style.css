@@ -32,6 +32,7 @@ body {
   margin-right: auto; /*Довго мучався і зрозумів, що вроді тільки так можна спозиціонувати один флекс елемент на головній осі вліво коли всі інші спозиціоновані вправо із-за justify-content:flex-end. Вова, так правильно робити?*/
   flex-shrink: 0;
   flex-grow: 0;
+  text-decoration: none;
 }
 
 .header-menu {
