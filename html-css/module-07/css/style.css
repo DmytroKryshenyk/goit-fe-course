@@ -1,0 +1,97 @@
+:root {
+  --font-logo: "DancingScript";
+  --font-header-menu: "MontserratRegular", sans-serif;
+  --font-main-titles-and-input-hint-text: "MontserratBold", sans-serif;
+  --font-main-subtitles: "DroidSerifItalic";
+  --font-article-text: "RobotoSlabRegular";
+  --color-for-logo-icons-menu-hover-button: #fed136;
+  --color-for-titles-and-menu-text: #222222;
+  --color-for-subtitle-and-text: #777777;
+  --color-for-input-hint-text: #bbbbbb;
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+
+@font-face {
+  font-family: DancingScript;
+  src: url(../fonts/Dancing-Script.ttf);
+}
+
+@font-face {
+  font-family: MontserratRegular;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: MontserratBold;
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: DroidSerifItalic;
+  src: url(../fonts/Droid-Serif-Italic.ttf);
+}
+
+@font-face {
+  font-family: RobotoSlabRegular;
+  src: url(../fonts/RobotoSlab-Regular.ttf);
+}
+
+body {
+  padding-top: 20px;
+    padding-bottom: 90px;
+}
+
+.wrapper {
+  width: 940px;
+  margin: auto;
+  background: lightgray;
+}
+
+.header {
+  display: flex;
+  justify-content:flex-end; /*Так .header-menu придавив вправо*/
+  background: lightcoral;
+  align-items: center; /*Всі елемента хедера стоять по вертикалі рівно поцентру */
+}
+
+.logo {
+  font-size: 26px;
+  font-family: DancingScript;
+  /* var(--font-logo) */
+  color: var(--color-for-logo-icons-menu-hover-button);
+  margin-right: auto; /*Вроді тільки так можна спозиціонувати один флекс елемент на головній осі вліво коли всі інші спозиціоновані вправо із-за justify-content:flex-end.*/
+  flex-shrink: 0;
+  flex-grow: 0;
+  text-decoration: none;
+  background: green;
+}
+
+.header-menu {  
+  background: lightseagreen;
+  flex-basis: 50%; /*Тут задав, щоб менюшка була в пів ширини всього хедера*/
+
+}
+
+.header-menu-list {
+  display: flex; /*Це задав для того, щоб змгти використати властивість justify-content: space-between;*/
+  justify-content: space-between; /*Вирівняв по головній осі кожен пункт менюшки так, щоб відстань між кожним була однакова, а по краям не було відступів*/
+  text-transform: uppercase;
+  background: lightpink;
+
+}
+
+.header-menu-list-li {
+  background: lightskyblue;
+}
+
+.header-menu-list-li-link {
+  text-decoration: none;
+  color: var(--color-for-titles-and-menu-text);
+  font-family: var(--font-header-menu);
+  background: lightgreen;
+}
+
+.header-menu-list-li-link:hover {
+  color: var(--color-for-logo-icons-menu-hover-button);
+}
