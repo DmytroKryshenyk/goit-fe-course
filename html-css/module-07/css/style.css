@@ -46,10 +46,15 @@ body {
   margin: auto;
 }
 
+.wrapper-for-all-content:not(:last-child) {
+  margin-bottom: 120px;
+}
+
+
 .header {
   display: flex;
   justify-content: flex-end; /*Так .header-menu придавив вправо*/
-  align-items: center; /*Всі елемента хедера стоять по вертикалі рівно поцентру */
+  align-items: center; /*Всі елементи хедера стоять по вертикалі рівно поцентру */
 }
 
 .logo {
@@ -57,8 +62,8 @@ body {
   font-family: var(--font-logo);
   color: var(--color-for-logo-icons-menu-hover-button);
   margin-right: auto; /*Вроді тільки так можна спозиціонувати один флекс елемент на головній осі вліво коли всі інші спозиціоновані вправо із-за justify-content:flex-end.*/
-  flex-shrink: 0;
-  flex-grow: 0;
+  flex-shrink: 0; /*Не розширяйся*/
+  flex-grow: 0; /*Не зжимайся*/
   text-decoration: none;
 }
 
@@ -67,7 +72,7 @@ body {
 }
 
 .header-menu-list {
-  display: flex; /*Це задав для того, щоб змгти використати властивість justify-content: space-between;*/
+  display: flex; /*Це задав для того, щоб змогти використати властивість justify-content: space-between;*/
   justify-content: space-between; /*Вирівняв по головній осі кожен пункт менюшки так, щоб відстань між кожним була однакова, а по краям не було відступів*/
   text-transform: uppercase;
 }
@@ -84,7 +89,6 @@ body {
 
 .services {
   margin-top: 120px;
-  padding-bottom: 120px;
 }
 
 .services-title {
@@ -94,7 +98,7 @@ body {
   color: var(--color-for-titles-and-menu-text);
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .services-description {
@@ -126,7 +130,6 @@ body {
 
 .services-article-title {
   margin-bottom: 10px;
-  text-transform: uppercase;
   font-family: var(--font-main-titles-and-input-hint-text);
   font-size: 18px;
   color: var(--color-for-titles-and-menu-text);
@@ -135,7 +138,7 @@ body {
 
 .services-article-text {
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
   font-family: var(--font-article-text);
   color: var(--color-for-subtitle-and-text);
 }
@@ -144,21 +147,15 @@ body {
 .wrapper-for-contact-section-background {
   width: 100%;
   background-image: url(../images/contact-background.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 120px;
-  
-}
-
-.contact {
-  padding-bottom: 110px;
-
+  padding-top: 120px; 
+  padding-bottom: 110px; /*Відступи робив падінгом для того, щоб на відступах щей фон теж залишався*/
 }
 
 .contact-title {
   font-size: 40px;
   font-family: var(--font-main-titles-and-input-hint-text);
-  font-weight: 900;
   color: var(--color-white);
   text-transform: uppercase;
   text-align: center;
@@ -175,8 +172,8 @@ body {
 
 .contact-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center; /*флекс елементи поцентру горизонтально*/
 }
 
 .contact-form input {
@@ -185,14 +182,14 @@ body {
 
 .contact-name-email-subject-input-text-wrapper {
   display: flex;
-  width: 100%;
+  flex-basis: 100%;
   justify-content: space-between;
 }
 
 .contact-name-email-subject-input-wrapper {
-  flex-basis: calc(50% - 30px);
+  flex-basis: calc(50% - 30px); /*віднімав 30px для того, щоб було це поле в 30px між імпутами і текстареа.*/
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /*Так зробив колононий порядок для інпутів імя, мейла і сабджекта*/
 }
 
 .contact-input {
@@ -213,15 +210,20 @@ body {
 
 .contact-text-input {
   flex-basis: 50%;
+  resize: none; /*Так прибрав можливість розтягування поля*/
+  overflow: hidden; /*Так прибрав полосу прокрутки*/
+  border-radius: 3px;
 }
 
 .contact-button-submit {
   background: var(--color-for-logo-icons-menu-hover-button);
-  flex-basis: 65px;
-  width: 240px;
+  flex-basis: 240px; /*так задав висоту кнопці(не забувай, що тут колоночний порядок)*/
+  height: 65px;
   text-align: center;
   font-family: var(--font-main-titles-and-input-hint-text);
   color: var(--color-white);
   margin-top: 30px;
-  border-radius: 3px
+  border-radius: 3px;
+  padding-top: 23px; /*так відцентрував текст в textarea*/
+  text-transform: uppercase;
 }
