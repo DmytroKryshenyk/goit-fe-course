@@ -38,60 +38,190 @@
 }
 
 body {
-  padding-top: 20px;
-    padding-bottom: 90px;
+  padding-top: 40px;
 }
 
-.wrapper {
+.wrapper-for-all-content {
   width: 940px;
   margin: auto;
-  background: lightgray;
 }
 
 .header {
   display: flex;
-  justify-content:flex-end; /*Так .header-menu придавив вправо*/
-  background: lightcoral;
+  justify-content: flex-end; /*Так .header-menu придавив вправо*/
   align-items: center; /*Всі елемента хедера стоять по вертикалі рівно поцентру */
 }
 
 .logo {
-  font-size: 26px;
-  font-family: DancingScript;
-  /* var(--font-logo) */
+  font-size: 30px;
+  font-family: var(--font-logo);
   color: var(--color-for-logo-icons-menu-hover-button);
   margin-right: auto; /*Вроді тільки так можна спозиціонувати один флекс елемент на головній осі вліво коли всі інші спозиціоновані вправо із-за justify-content:flex-end.*/
   flex-shrink: 0;
   flex-grow: 0;
   text-decoration: none;
-  background: green;
 }
 
-.header-menu {  
-  background: lightseagreen;
+.header-menu {
   flex-basis: 50%; /*Тут задав, щоб менюшка була в пів ширини всього хедера*/
-
 }
 
 .header-menu-list {
   display: flex; /*Це задав для того, щоб змгти використати властивість justify-content: space-between;*/
   justify-content: space-between; /*Вирівняв по головній осі кожен пункт менюшки так, щоб відстань між кожним була однакова, а по краям не було відступів*/
   text-transform: uppercase;
-  background: lightpink;
-
-}
-
-.header-menu-list-li {
-  background: lightskyblue;
 }
 
 .header-menu-list-li-link {
   text-decoration: none;
   color: var(--color-for-titles-and-menu-text);
   font-family: var(--font-header-menu);
-  background: lightgreen;
 }
 
 .header-menu-list-li-link:hover {
   color: var(--color-for-logo-icons-menu-hover-button);
+}
+
+.services {
+  margin-top: 120px;
+  padding-bottom: 120px;
+}
+
+.services-title {
+  font-size: 40px;
+  font-family: var(--font-main-titles-and-input-hint-text);
+  font-weight: 900;
+  color: var(--color-for-titles-and-menu-text);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.services-description {
+  font-size: 16px;
+  font-family: var(--font-main-subtitles);
+  color: var(--color-for-subtitle-and-text);
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.services-article-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.services-article {
+  display: flex;
+  flex-basis: 30%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-article-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.services-article-title {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: var(--font-main-titles-and-input-hint-text);
+  font-size: 18px;
+  color: var(--color-for-titles-and-menu-text);
+}
+
+
+.services-article-text {
+  text-align: center;
+  font-size: 13px;
+  font-family: var(--font-article-text);
+  color: var(--color-for-subtitle-and-text);
+}
+
+
+.wrapper-for-contact-section-background {
+  width: 100%;
+  background-image: url(../images/contact-background.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-top: 120px;
+  
+}
+
+.contact {
+  padding-bottom: 110px;
+
+}
+
+.contact-title {
+  font-size: 40px;
+  font-family: var(--font-main-titles-and-input-hint-text);
+  font-weight: 900;
+  color: var(--color-white);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-description {
+  font-size: 16px;
+  font-family: var(--font-main-subtitles);
+  color: var(--color-for-subtitle-and-text);
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form input {
+  border-radius: 3px
+}
+
+.contact-name-email-subject-input-text-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.contact-name-email-subject-input-wrapper {
+  flex-basis: calc(50% - 30px);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-input {
+  padding: 20px;
+}
+
+.contact-input:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.contact-input::placeholder {
+  font-family: var(--font-main-titles-and-input-hint-text);
+  text-transform: uppercase;
+  color: var(--color-for-input-hint-text);
+  font-size: 14px;
+}
+
+
+.contact-text-input {
+  flex-basis: 50%;
+}
+
+.contact-button-submit {
+  background: var(--color-for-logo-icons-menu-hover-button);
+  flex-basis: 65px;
+  width: 240px;
+  text-align: center;
+  font-family: var(--font-main-titles-and-input-hint-text);
+  color: var(--color-white);
+  margin-top: 30px;
+  border-radius: 3px
 }
