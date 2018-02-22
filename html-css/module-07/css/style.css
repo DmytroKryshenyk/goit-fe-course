@@ -224,6 +224,6 @@ body {
   color: var(--color-white);
   margin-top: 30px;
   border-radius: 3px;
-  padding-top: 23px; /*так відцентрував текст в textarea*/
   text-transform: uppercase;
+  border: 0;
 }
