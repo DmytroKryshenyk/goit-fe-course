@@ -1,0 +1,162 @@
+:root {
+  --font-for-logo-register-buttons-titles-members-name: "Montserrat", sans-serif;
+  --font-for-subtitles-members-description: "Roboto", sans-serif;
+  --text-color-for-logo-register-buttons-text-titles-subtitles: #ffffff;
+  --text-color-for-partners-title-partners-members-name: #333333;
+  --text-color-for-members-description: #8f8f8f;
+  --color-for-bottons: #ff4e50;
+}
+
+body {
+}
+
+.wrapper-for-all-content {
+  margin: auto;
+  min-width: 20rem;
+  max-width: 58.75rem;
+  background: lightgrey;
+}
+
+.wrapper-for-header-and-main-find-section-background {
+  width: 100%;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-family: var(--font-for-logo-register-buttons-titles-members-name);
+  color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: khaki;
+}
+
+.login-and-sign-up-list {
+  font-size: 0.875rem;
+  background: lavender;
+}
+
+.login-and-sign-up-list-li {
+  background: red;
+}
+
+.login-and-sign-up-list-li-link {
+  font-size: 0.875rem;
+  font-family: var(--font-for-logo-register-buttons-titles-members-name);
+  color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 2.1875rem; /*Вова, так нормально вирівнювати текст всередині ссилки?*/
+  text-align: center;
+  background: blue;
+}
+
+.main-find-title {
+  font-size: 3.25rem;
+  font-family: var(--font-for-logo-register-buttons-titles-members-name);
+  color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  background: khaki;
+}
+.main-find-subtitle {
+  font-size: 1.5rem;
+  font-family: var(--font-for-subtitles-members-description);
+  color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
+  font-weight: 400;
+  text-align: center;
+  background: lightcyan;
+}
+
+.main-find-partner-button {
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: var(--font-for-logo-register-buttons-titles-members-name);
+  font-weight: 700;
+  color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
+  background: lightgreen;
+}
+
+.partner-finder-title {
+  font-size: 1.375rem;
+  font-family: var(--font-for-logo-register-buttons-titles-members-name);
+  color: var(--text-color-for-partners-title-partners-members-name);
+  font-weight: 700;
+  text-align: center;
+  background: lightskyblue;
+}
+
+.partner-finder-member-wrapper {
+  background: lightsalmon;
+}
+
+.partner-finder-member-image {
+  background: red;
+  display: block;
+}
+
+.partner-finder-member-name {
+  font-size: 0.875rem;
+  font-family: var(--font-for-logo-register-buttons-titles-members-name);
+  color: var(--text-color-for-partners-title-partners-members-name);
+  font-weight: 700;
+  text-align: center;
+  background: lightskyblue;
+}
+
+.partner-finder-member-description {
+  font-size: 0.875rem;
+  font-family: var(--font-for-subtitles-members-description);
+  color: var(--text-color-for-members-description);
+  text-align: center;
+  background: lightpink;
+}
+
+.partner-finder-button {
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: var(--font-for-logo-register-buttons-titles-members-name);
+  font-weight: 700;
+  color: var(--color-for-bottons);
+  background: lightgreen;
+  display: block;
+  text-align: center;
+}
+
+/* MEDIA */
+
+
+
+
+@media (min-width: 320px) {
+
+  .wrapper-for-all-content {
+    min-width: 20rem;
+    max-width: 48rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .login-and-sign-up-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-and-sign-up-list-li {
+    display: flex;
+    flex-basis: 5.3125rem;
+    height: 2.1875rem;
+  }
+
+  .login-and-sign-up-list-li-link {
+    flex-basis: 100%;
+  }
+
+
+}
