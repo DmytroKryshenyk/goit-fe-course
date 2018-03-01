@@ -68,16 +68,16 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  background: khaki;
+  -background: khaki;
   margin-bottom: 1rem;
 }
 
 .main-find-subtitle {
   font-family: var(--font-for-subtitles-members-description);
   color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
-  font-weight: 400;
+  font-weight: 100;
   text-align: center;
-  background: rgb(255, 200, 127);
+  -background: rgb(255, 200, 127);
 }
 
 .bottons-for-main-find-and-partners-finder {
@@ -85,9 +85,9 @@ body {
   font-size: 0.875rem;
   font-family: var(--font-for-logo-register-buttons-titles-members-name);
   font-weight: 700;
-  display: block; /*Так виставив ссилку по центру*/
   text-align: center;
   height: 2.5rem;
+  display: block; /*Так виставив ссилку по центру*/
   margin: auto;
   border: 2px solid transparent;
   border-radius: 2rem;
@@ -99,8 +99,8 @@ body {
   background: var(--color-for-bottons);
 }
 
-.partner-finder {
-  padding-top: 4.375rem; /*Робив це падінгом, бо цей блок обгорнутий у врапер, а так як врапер це батько, то від нього(його країв зсередини) марджином не можна відштовхуватись. А, наприклад, падінг самі обгортці не можна дати, бо цей врапер з такими же валстивостями і назво класу є у вищому блоці, а там відступ уже інший.*/
+.wrapper-for-all-content-of-partner-finder-section {
+  margin-top: 4.375rem;
 }
 
 .partner-finder-title {
@@ -109,19 +109,20 @@ body {
   color: var(--text-color-for-partners-title-partners-members-name);
   font-weight: 700;
   text-align: center;
-  background: lightskyblue;
+  -background: lightskyblue;
 }
 
 .partner-finder-member-wrapper {
-  background: lightsalmon;
+  -background: lightsalmon;
 }
 
 .partner-finder-member-image {
-  background: red;
+  -background: red;
   display: block;
-  margin: 1.25rem auto;
+  margin: 1rem auto;
   width: 7.5rem;
 }
+
 
 .partner-finder-member-name {
   font-size: 0.875rem;
@@ -129,7 +130,7 @@ body {
   color: var(--text-color-for-partners-title-partners-members-name);
   font-weight: 700;
   text-align: center;
-  background: lightskyblue;
+  -background: lightskyblue;
   margin-bottom: 1rem;
 }
 
@@ -138,7 +139,7 @@ body {
   font-family: var(--font-for-subtitles-members-description);
   color: var(--text-color-for-members-description);
   text-align: center;
-  background: lightpink;
+  -background: lightpink;
 }
 
 .partner-finder-button {
@@ -161,16 +162,18 @@ body {
 
   .header {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
   }
 
   .logo {
     order: 2;
+    text-align: center;
+    align-self: center;
   }
 
   .login-and-sign-up {
-    flex-basis: 100%; /*Це для того, щоб лого перестрибнуло на 2 строку*/
+    /* flex-basis: 100%; Це для того, щоб лого перестрибнуло на 2 строку */
     margin-bottom: 7rem;
   }
 
@@ -209,8 +212,51 @@ body {
   }
 
   .partner-finder-button {
-    margin-top:1.5rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper-for-header-and-main-find-section-background {
+    padding-top: 2.375rem;
+    padding-bottom: 15rem;
   }
 
-  
+  .wrapper-for-all-content {
+    min-width: 48rem;
+    max-width: 58.75rem;
+  }
+/* Все, що нижче цьоЇ лінії дорозбирай. А також порозбирай чи все ок у медіа, що вище-------------------------------------------------------------------------------------------------- */
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    flex-direction: row;
+  }
+
+  .logo {
+    order: 0;
+    margin-right: auto; /*Вроді тільки так можна спозиціонувати один флекс елемент на головній осі вліво коли всі інші спозиціоновані вправо із-за justify-content:flex-end.*/
+  }
+
+  .login-and-sign-up {
+    margin-bottom: 7rem;
+  }
+
+  .login-and-sign-up-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-and-sign-up-list-li {
+    flex-basis: 5.3125rem;
+    height: 2.1875rem;
+  }
+
+  .login-and-sign-up-list-li-link {
+    display: block; /*Розтянув саму ссилку на всю ширину li*/
+  }
+
+
+
 }
