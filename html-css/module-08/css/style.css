@@ -8,6 +8,7 @@
 }
 
 body {
+  padding-bottom: 2.5rem;
 }
 
 .wrapper-for-all-content {
@@ -22,6 +23,7 @@ body {
   background-image: url(../images/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .logo {
@@ -41,6 +43,8 @@ body {
 
 .login-and-sign-up-list-li {
   background: red;
+  border: 2px solid transparent;
+  border-radius: 2rem;
 }
 
 .login-and-sign-up-list-li-link {
@@ -49,36 +53,54 @@ body {
   color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
   font-weight: 400;
   text-decoration: none;
-  line-height: 2.1875rem; /*Вова, так нормально вирівнювати текст всередині ссилки?*/
+  line-height: 1.9rem; /*Вова, так нормально вирівнювати текст всередині ссилки?*/
   text-align: center;
-  background: blue;
+}
+
+.sign-up-button {
+  border: 2px solid
+    var(--text-color-for-logo-register-buttons-text-titles-subtitles);
 }
 
 .main-find-title {
-  font-size: 3.25rem;
   font-family: var(--font-for-logo-register-buttons-titles-members-name);
   color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   background: khaki;
+  margin-bottom: 1rem;
 }
+
 .main-find-subtitle {
-  font-size: 1.5rem;
   font-family: var(--font-for-subtitles-members-description);
   color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
   font-weight: 400;
   text-align: center;
-  background: lightcyan;
+  background: rgb(255, 200, 127);
 }
 
-.main-find-partner-button {
+.bottons-for-main-find-and-partners-finder {
   text-decoration: none;
   font-size: 0.875rem;
   font-family: var(--font-for-logo-register-buttons-titles-members-name);
   font-weight: 700;
+  display: block; /*Так виставив ссилку по центру*/
+  text-align: center;
+  height: 2.5rem;
+  margin: auto;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+  line-height: 2.25rem;
+}
+
+.main-find-partner-button {
   color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
-  background: lightgreen;
+  background: var(--color-for-bottons);
+}
+
+.partner-finder {
+  padding-top: 4.375rem; /*Робив це падінгом, бо цей блок обгорнутий у врапер, а так як врапер це батько, то від нього(його країв зсередини) марджином не можна відштовхуватись. А, наприклад, падінг самі обгортці не можна дати, бо цей врапер з такими же валстивостями і назво класу є у вищому блоці, а там відступ уже інший.*/
 }
 
 .partner-finder-title {
@@ -97,6 +119,8 @@ body {
 .partner-finder-member-image {
   background: red;
   display: block;
+  margin: 1.25rem auto;
+  width: 7.5rem;
 }
 
 .partner-finder-member-name {
@@ -106,6 +130,7 @@ body {
   font-weight: 700;
   text-align: center;
   background: lightskyblue;
+  margin-bottom: 1rem;
 }
 
 .partner-finder-member-description {
@@ -117,30 +142,36 @@ body {
 }
 
 .partner-finder-button {
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: var(--font-for-logo-register-buttons-titles-members-name);
-  font-weight: 700;
   color: var(--color-for-bottons);
-  background: lightgreen;
-  display: block;
-  text-align: center;
+  border-color: var(--color-for-bottons);
 }
 
 /* MEDIA */
 
-
-
-
 @media (min-width: 320px) {
+  .wrapper-for-header-and-main-find-section-background {
+    padding-top: 1.25rem;
+    padding-bottom: 8.75rem;
+  }
 
   .wrapper-for-all-content {
     min-width: 20rem;
     max-width: 48rem;
   }
 
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .logo {
-    display: none;
+    order: 2;
+  }
+
+  .login-and-sign-up {
+    flex-basis: 100%; /*Це для того, щоб лого перестрибнуло на 2 строку*/
+    margin-bottom: 7rem;
   }
 
   .login-and-sign-up-list {
@@ -149,14 +180,37 @@ body {
   }
 
   .login-and-sign-up-list-li {
-    display: flex;
     flex-basis: 5.3125rem;
     height: 2.1875rem;
   }
 
   .login-and-sign-up-list-li-link {
-    flex-basis: 100%;
+    display: block; /*Розтянув саму ссилку на всю ширину li*/
   }
 
+  .main-find-title {
+    font-size: 1.875rem;
+    margin-top: 2.5rem;
+  }
 
+  .main-find-subtitle {
+    margin-bottom: 1rem;
+  }
+
+  .bottons-for-main-find-and-partners-finder {
+    width: 17.5rem;
+  }
+
+  .partner-finder {
+  }
+
+  .partner-finder-member-wrapper {
+    padding: 1rem 3rem 0 3rem;
+  }
+
+  .partner-finder-button {
+    margin-top:1.5rem;
+  }
+
+  
 }
