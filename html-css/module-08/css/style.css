@@ -11,19 +11,23 @@ body {
   padding-bottom: 2.5rem;
 }
 
-.wrapper-for-all-content {
-  margin: auto;
-  min-width: 20rem;
-  max-width: 58.75rem;
-  background: lightgrey;
-}
-
 .wrapper-for-header-and-main-find-section-background {
   width: 100%;
   background-image: url(../images/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.wrapper-for-all-content {
+  margin: auto;
+  min-width: 20rem;
+  max-width: 58.75rem;
+  -background: lightgrey;
+}
+
+.header {
+  -background: lightpink;
 }
 
 .logo {
@@ -33,16 +37,16 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  background: khaki;
+  -background: khaki;
 }
 
 .login-and-sign-up-list {
   font-size: 0.875rem;
-  background: lavender;
+  -background: lavender;
 }
 
 .login-and-sign-up-list-li {
-  background: red;
+  -background: red;
   border: 2px solid transparent;
   border-radius: 2rem;
 }
@@ -123,7 +127,6 @@ body {
   width: 7.5rem;
 }
 
-
 .partner-finder-member-name {
   font-size: 0.875rem;
   font-family: var(--font-for-logo-register-buttons-titles-members-name);
@@ -162,18 +165,17 @@ body {
 
   .header {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*Це дав для того, щоб працювала css властивысть order*/
     justify-content: center;
   }
 
   .logo {
-    order: 2;
+    order: 1;
     text-align: center;
     align-self: center;
   }
 
   .login-and-sign-up {
-    /* flex-basis: 100%; Це для того, щоб лого перестрибнуло на 2 строку */
     margin-bottom: 7rem;
   }
 
@@ -197,6 +199,7 @@ body {
   }
 
   .main-find-subtitle {
+    font-size: 1.125rem;
     margin-bottom: 1rem;
   }
 
@@ -207,9 +210,14 @@ body {
   .partner-finder {
   }
 
-  .partner-finder-member-wrapper {
-    padding: 1rem 3rem 0 3rem;
+  .partner-finder-all-members-wrapper {
+    padding: 0 15%;
   }
+
+  /* .partner-finder-member-wrapper {
+    -padding: 1rem 3rem 0 3rem;
+    outline: 2px solid red;
+  } */
 
   .partner-finder-button {
     margin-top: 1.5rem;
@@ -226,37 +234,67 @@ body {
     min-width: 48rem;
     max-width: 58.75rem;
   }
-/* Все, що нижче цьоЇ лінії дорозбирай. А також порозбирай чи все ок у медіа, що вище-------------------------------------------------------------------------------------------------- */
+
   .header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
+    justify-content: space-between;
     flex-direction: row;
+    margin-bottom: 8rem;
   }
 
   .logo {
     order: 0;
-    margin-right: auto; /*Вроді тільки так можна спозиціонувати один флекс елемент на головній осі вліво коли всі інші спозиціоновані вправо із-за justify-content:flex-end.*/
   }
 
   .login-and-sign-up {
-    margin-bottom: 7rem;
-  }
-
-  .login-and-sign-up-list {
-    display: flex;
-    justify-content: center;
+    margin-bottom: 0; /*Забираю відступ, який був в мобільній медіа*/
   }
 
   .login-and-sign-up-list-li {
-    flex-basis: 5.3125rem;
+    display: inline-block; /*Зробив їх інлан-блочними, щоб дати ширину, бо вони зхлопувались і не міг дати їм ширину навіть коли вони флекси через flex-basis*/
+    width: 5.3125rem;
     height: 2.1875rem;
   }
 
-  .login-and-sign-up-list-li-link {
-    display: block; /*Розтянув саму ссилку на всю ширину li*/
+  .main-find-title {
+    font-size: 3.25rem;
+    margin-top: 0;
   }
 
+  .main-find-subtitle {
+    font-size: 1.375rem;
+    margin-bottom: 2rem;
+  }
 
+  .bottons-for-main-find-and-partners-finder {
+    width: 14rem;
+  }
 
+  .partner-finder {
+  }
+
+  .partner-finder-all-members-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10%;
+  }
+
+  .partner-finder-member-wrapper {
+    flex-basis: 35%;
+    padding: 0;
+  }
+
+  .partner-finder-member-wrapper:nth-child(2n-1) {
+    margin-right: 5%;
+  }
+
+  .partner-finder-member-wrapper:not(:nth-last-child(-n+2)) {
+    margin-bottom: 5%;
+    
+  }
+
+  .partner-finder-button {
+    margin-top: 1.5rem;
+  }
 }
