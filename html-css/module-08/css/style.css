@@ -172,13 +172,19 @@ body {
   }
 
   .main-find-title {
-    font-size: 1.875rem;
+    font-size: 1.8rem;
     margin-top: 2.5rem;
+    width: 17.5rem; /*Це зробив для того, щоб дати ширину тайтлу і не дати тайтлу розширятись і ставати в один рядок. Тобто щоб ін був завжди в 2 рядка.*/
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .main-find-subtitle {
     font-size: 1.125rem;
     margin-bottom: 1rem;
+    width: 17.5rem; /*Це зробив для того, щоб дати ширину тайтлу і не дати тайтлу розширятись і ставати в один рядок. Тобто щоб ін був завжди в 2 рядка.*/
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .bottons-for-main-find-and-partners-finder {
@@ -227,11 +233,17 @@ body {
   .main-find-title {
     font-size: 3.25rem;
     margin-top: 0;
+    width: 32rem; /*Це зробив для того, щоб дати ширину тайтлу і не дати тайтлу розширятись і ставати в один рядок. Тобто щоб ін був завжди в 2 рядка.*/
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .main-find-subtitle {
     font-size: 1.375rem;
     margin-bottom: 2rem;
+    width: 32rem; /*Це зробив для того, щоб дати ширину тайтлу і не дати тайтлу розширятись і ставати в один рядок. Тобто щоб ін був завжди в 2 рядка.*/
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .bottons-for-main-find-and-partners-finder {
