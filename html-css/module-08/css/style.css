@@ -14,7 +14,6 @@ body {
 .wrapper-for-header-and-main-find-section-background {
   width: 100%;
   background-image: url(../images/background.jpg);
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -23,11 +22,6 @@ body {
   margin: auto;
   min-width: 20rem;
   max-width: 58.75rem;
-  -background: lightgrey;
-}
-
-.header {
-  -background: lightpink;
 }
 
 .logo {
@@ -37,18 +31,20 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  -background: khaki;
 }
 
 .login-and-sign-up-list {
   font-size: 0.875rem;
-  -background: lavender;
 }
 
 .login-and-sign-up-list-li {
-  -background: red;
   border: 2px solid transparent;
   border-radius: 2rem;
+}
+
+.sign-up-button {
+  border: 2px solid
+    var(--text-color-for-logo-register-buttons-text-titles-subtitles);
 }
 
 .login-and-sign-up-list-li-link {
@@ -57,13 +53,8 @@ body {
   color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
   font-weight: 400;
   text-decoration: none;
-  line-height: 1.9rem; /*Вова, так нормально вирівнювати текст всередині ссилки?*/
+  line-height: 1.9rem; /*Так вирівняв текст всередині ссилки*/
   text-align: center;
-}
-
-.sign-up-button {
-  border: 2px solid
-    var(--text-color-for-logo-register-buttons-text-titles-subtitles);
 }
 
 .main-find-title {
@@ -72,7 +63,6 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  -background: khaki;
   margin-bottom: 1rem;
 }
 
@@ -81,7 +71,6 @@ body {
   color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
   font-weight: 100;
   text-align: center;
-  -background: rgb(255, 200, 127);
 }
 
 .bottons-for-main-find-and-partners-finder {
@@ -113,18 +102,14 @@ body {
   color: var(--text-color-for-partners-title-partners-members-name);
   font-weight: 700;
   text-align: center;
-  -background: lightskyblue;
-}
-
-.partner-finder-member-wrapper {
-  -background: lightsalmon;
+  margin-bottom: 1rem;
 }
 
 .partner-finder-member-image {
-  -background: red;
   display: block;
-  margin: 1rem auto;
+  margin: auto;
   width: 7.5rem;
+  margin-bottom: 1rem;
 }
 
 .partner-finder-member-name {
@@ -133,7 +118,6 @@ body {
   color: var(--text-color-for-partners-title-partners-members-name);
   font-weight: 700;
   text-align: center;
-  -background: lightskyblue;
   margin-bottom: 1rem;
 }
 
@@ -142,7 +126,6 @@ body {
   font-family: var(--font-for-subtitles-members-description);
   color: var(--text-color-for-members-description);
   text-align: center;
-  -background: lightpink;
 }
 
 .partner-finder-button {
@@ -156,11 +139,6 @@ body {
   .wrapper-for-header-and-main-find-section-background {
     padding-top: 1.25rem;
     padding-bottom: 8.75rem;
-  }
-
-  .wrapper-for-all-content {
-    min-width: 20rem;
-    max-width: 48rem;
   }
 
   .header {
@@ -207,17 +185,13 @@ body {
     width: 17.5rem;
   }
 
-  .partner-finder {
-  }
-
   .partner-finder-all-members-wrapper {
     padding: 0 15%;
   }
 
-  /* .partner-finder-member-wrapper {
-    -padding: 1rem 3rem 0 3rem;
-    outline: 2px solid red;
-  } */
+  .partner-finder-member-wrapper {
+    margin-bottom: 2rem;
+  }
 
   .partner-finder-button {
     margin-top: 1.5rem;
@@ -226,19 +200,13 @@ body {
 
 @media (min-width: 768px) {
   .wrapper-for-header-and-main-find-section-background {
-    padding-top: 2.375rem;
-    padding-bottom: 15rem;
-  }
-
-  .wrapper-for-all-content {
-    min-width: 48rem;
-    max-width: 58.75rem;
+    padding: 2.375rem 10% 15rem 10%;
   }
 
   .header {
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: space-between;
     margin-bottom: 8rem;
   }
 
@@ -269,8 +237,8 @@ body {
   .bottons-for-main-find-and-partners-finder {
     width: 14rem;
   }
-
-  .partner-finder {
+  .partner-finder-title {
+    margin-bottom: 2rem;
   }
 
   .partner-finder-all-members-wrapper {
@@ -283,18 +251,24 @@ body {
   .partner-finder-member-wrapper {
     flex-basis: 35%;
     padding: 0;
+    margin-bottom: 0%;
   }
 
   .partner-finder-member-wrapper:nth-child(2n-1) {
     margin-right: 5%;
   }
 
-  .partner-finder-member-wrapper:not(:nth-last-child(-n+2)) {
+  .partner-finder-member-wrapper:not(:nth-last-child(-n + 2)) {
     margin-bottom: 5%;
-    
+  }
+}
+/* ---------------------------------------------------------------------------- */
+@media (min-width: 940px) {
+  .partner-finder-member-wrapper {
+    flex-basis: 21.25%; /*Змнив їх ширину так, щоб уже вміщалось четверо*/
   }
 
-  .partner-finder-button {
-    margin-top: 1.5rem;
+  .partner-finder-member-wrapper:not(:nth-child(4n)) {
+    margin-right: 5%; /*Тут я змінив порядок марджинів для медія 940 і більше. Задав всім крім четвертого відступ зправа*/
   }
 }
