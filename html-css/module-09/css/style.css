@@ -135,7 +135,7 @@ body {
   border-color: var(--color-for-bottons);
 }
 
-/* MEDIA */
+/* MEDIA
 
 @media (min-width: 320px) {
   .wrapper-for-header-and-main-find-section-background {
@@ -145,7 +145,7 @@ body {
 
   .header {
     display: flex;
-    flex-direction: column; /*Це дав для того, щоб працювала css властивысть order*/
+    flex-direction: column; Це дав для того, щоб працювала css властивысть order
     justify-content: center;
   }
 
@@ -170,7 +170,7 @@ body {
   }
 
   .login-and-sign-up-list-li-link {
-    display: block; /*Розтянув саму ссилку на всю ширину li*/
+    display: block; Розтянув саму ссилку на всю ширину li
   }
 
   .main-find-title {
@@ -221,11 +221,11 @@ body {
   }
 
   .login-and-sign-up {
-    margin-bottom: 0; /*Забираю відступ, який був в мобільній медіа*/
+    margin-bottom: 0; Забираю відступ, який був в мобільній медіа
   }
 
   .login-and-sign-up-list-li {
-    display: inline-block; /*Зробив їх інлан-блочними, щоб дати ширину, бо вони зхлопувались і не міг дати їм ширину навіть коли вони флекси через flex-basis*/
+    display: inline-block; Зробив їх інлан-блочними, щоб дати ширину, бо вони зхлопувались і не міг дати їм ширину навіть коли вони флекси через флекс бейсіс
     width: 5.3125rem;
     height: 2.1875rem;
   }
@@ -276,10 +276,10 @@ body {
     margin-bottom: 5%;
   }
 }
-/* ---------------------------------------------------------------------------- */
+----------------------------------------------------------------------------
 @media (min-width: 940px) {
   .partner-finder-member-wrapper {
-    flex-basis: 21.25%; /*Змнив їх ширину так, щоб уже вміщалось четверо*/
+    flex-basis: 21.25%; Змнив їх ширину так, щоб уже вміщалось четверо
     margin-bottom: 0;
   }
 
@@ -288,6 +288,6 @@ body {
   }
 
   .partner-finder-member-wrapper:not(:nth-child(4n)) {
-    margin-right: 5%; /*Тут я змінив порядок марджинів для медія 940 і більше. Задав всім крім четвертого відступ зправа*/
+    margin-right: 5%; Тут я змінив порядок марджинів для медія 940 і більше. Задав всім крім четвертого відступ зправа
   }
-}
+} */
