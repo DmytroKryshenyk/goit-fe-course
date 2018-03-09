@@ -16,12 +16,15 @@ body {
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
   background-position: center center;
+  padding-top: 1.25rem;
+  padding-bottom: 8.75rem;
 }
 
 .wrapper-for-all-content {
   margin: auto;
   min-width: 20rem;
   max-width: 58.75rem;
+  background: lightgrey;
 }
 
 .logo {
@@ -31,30 +34,52 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  background: lightblue;
+  text-align: center;
+  line-height: 2.1875rem; /*Так вирівняв текст всередині ссилки*/
+  margin: auto;
+}
+
+.login-and-sign-up {
+  margin-bottom: 7rem;
+  outline: 2px solid red;
 }
 
 .login-and-sign-up-list {
   font-size: 0.875rem;
+  display: flex;
+  justify-content: center;
+  background: lightgreen;
+  outline: 2px solid orange;
 }
 
 .login-and-sign-up-list-li {
   border: 2px solid transparent;
   border-radius: 2rem;
+  height: 2.1875rem;
+  line-height: 1.9rem; /*Так вирівняв текст всередині ссилки*/
+  flex-basis: 5.5rem;
+  background: lightskyblue;
 }
-
-.sign-up-button {
-  border: 2px solid
-    var(--text-color-for-logo-register-buttons-text-titles-subtitles);
-}
-
 .login-and-sign-up-list-li-link {
   font-size: 0.875rem;
   font-family: var(--font-for-logo-register-buttons-titles-members-name);
   color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
   font-weight: 400;
   text-decoration: none;
-  line-height: 1.9rem; /*Так вирівняв текст всередині ссилки*/
   text-align: center;
+  background: lightpink;
+  display: block;
+  text-align: center;
+}
+
+.sign-up-button {
+  border: 2px solid
+    var(--text-color-for-logo-register-buttons-text-titles-subtitles);
+    -background: lightcoral;
+}
+.main-find {
+  margin-top: 2.5rem;
 }
 
 .main-find-title {
@@ -64,7 +89,8 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 1rem;
-  padding: 0 1rem; /*Задав чисто в декоративних цілях*/
+  font-size: 1.8rem;
+  background: lightcyan;
 }
 
 .main-find-subtitle {
@@ -72,7 +98,9 @@ body {
   color: var(--text-color-for-logo-register-buttons-text-titles-subtitles);
   font-weight: 100;
   text-align: center;
-  padding: 0 1rem; /*Задав чисто в декоративних цілях*/
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  background: lightslategray;
 }
 
 .bottons-for-main-find-and-partners-finder {
@@ -87,6 +115,7 @@ body {
   border: 2px solid transparent;
   border-radius: 2rem;
   line-height: 2.25rem;
+  width: 17.5rem;
 }
 
 .main-find-partner-button {
@@ -98,6 +127,10 @@ body {
   margin-top: 4.375rem;
 }
 
+.partner-finder-all-members-wrappe {
+  background: orange;
+}
+
 .partner-finder-title {
   font-size: 1.375rem;
   font-family: var(--font-for-logo-register-buttons-titles-members-name);
@@ -105,6 +138,7 @@ body {
   font-weight: 700;
   text-align: center;
   margin-bottom: 1rem;
+  background: lightblue;
 }
 
 .partner-finder-member-image {
@@ -112,6 +146,7 @@ body {
   margin: auto;
   width: 7.5rem;
   margin-bottom: 1rem;
+  background: lightsalmon;
 }
 
 .partner-finder-member-name {
@@ -121,6 +156,7 @@ body {
   font-weight: 700;
   text-align: center;
   margin-bottom: 1rem;
+  background: lightseagreen;
 }
 
 .partner-finder-member-description {
@@ -128,83 +164,72 @@ body {
   font-family: var(--font-for-subtitles-members-description);
   color: var(--text-color-for-members-description);
   text-align: center;
+  background: lightpink;
+}
+
+
+.partner-finder-member-wrapper:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 .partner-finder-button {
   color: var(--color-for-bottons);
   border-color: var(--color-for-bottons);
+  margin-top: 1.5rem;
 }
 
-/* MEDIA
+/* MEDIA */
 
-@media (min-width: 320px) {
+@media (min-width: 768px) {
+
   .wrapper-for-header-and-main-find-section-background {
-    padding-top: 1.25rem;
-    padding-bottom: 8.75rem;
+    padding-top: 2.375rem;
+    padding-bottom: 14.625rem;
   }
 
-  .header {
+  .row-for-header-elements {
     display: flex;
-    flex-direction: column; Це дав для того, щоб працювала css властивысть order
-    justify-content: center;
+    justify-content: space-between;
   }
+
+.header {
+  margin-bottom: 8rem;
+}
 
   .logo {
-    order: 1;
-    text-align: center;
-    align-self: center;
+    margin: 0;
   }
 
   .login-and-sign-up {
-    margin-bottom: 7rem;
+    margin-bottom: 0;
+    outline: 2px solid red;
+    order:1;
   }
 
-  .login-and-sign-up-list {
-    display: flex;
-    justify-content: center;
-  }
-
-  .login-and-sign-up-list-li {
-    flex-basis: 5.3125rem;
-    height: 2.1875rem;
-  }
-
-  .login-and-sign-up-list-li-link {
-    display: block; Розтянув саму ссилку на всю ширину li
+  .main-find {
+    margin-top: 0;
   }
 
   .main-find-title {
-    font-size: 1.8rem;
-    margin-top: 2.5rem;
-    margin-right: auto;
-    margin-left: auto;
+    font-size: 3.25rem;
   }
 
   .main-find-subtitle {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .bottons-for-main-find-and-partners-finder {
-    width: 17.5rem;
-  }
-
-  .partner-finder-all-members-wrapper {
-    padding: 0 15%;
-  }
-
-  .partner-finder-member-wrapper:not(:last-child) {
+    font-size: 1.375rem;
     margin-bottom: 2rem;
   }
 
-  .partner-finder-button {
-    margin-top: 1.5rem;
+  .bottons-for-main-find-and-partners-finder {
+    width: 14rem;
   }
+
+  .partner-finder-title {
+    margin-bottom: 2rem;
+  }
+
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .wrapper-for-header-and-main-find-section-background {
     padding: 2.375rem 10% 15rem 10%;
   }
@@ -289,5 +314,65 @@ body {
 
   .partner-finder-member-wrapper:not(:nth-child(4n)) {
     margin-right: 5%; Тут я змінив порядок марджинів для медія 940 і більше. Задав всім крім четвертого відступ зправа
+  }
+} */
+
+
+
+
+
+
+
+
+/* @media (min-width: 320px) {
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .login-and-sign-up-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-and-sign-up-list-li {
+    flex-basis: 5.3125rem;
+  }
+
+
+  .main-find-title {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .main-find-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .bottons-for-main-find-and-partners-finder {
+    width: 17.5rem;
+  }
+
+  .partner-finder-all-members-wrapper {
+    padding: 0 15%;
+  }
+
+  .partner-finder-member-wrapper:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  .partner-finder-button {
+    margin-top: 1.5rem;
   }
 } */
