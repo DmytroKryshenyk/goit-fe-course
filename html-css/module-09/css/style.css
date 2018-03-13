@@ -22,8 +22,6 @@ body {
 
 .wrapper-for-all-content {
   margin: auto;
-  min-width: 20rem;
-  max-width: 58.75rem;
 }
 
 .logo {
@@ -35,6 +33,7 @@ body {
   text-decoration: none;
   text-align: center;
   line-height: 2.1875rem; /*Так вирівняв текст всередині ссилки. Видно при розширеннях вище 768px*/
+  display: block;
 }
 
 .login-and-sign-up {
