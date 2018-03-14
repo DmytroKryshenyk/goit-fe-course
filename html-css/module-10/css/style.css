@@ -1,0 +1,251 @@
+:root {
+  --main-title-and-subtitle-color: #333333;
+  --main-text-color: #999999;
+  --main-icon-button-and-shadow-color: #95e1d3;
+  --main-icon-and-gradient-color: #f38181;
+  --main-icon-and-gradient-color-2: #fce38a;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --font-for-menu-title-and-footer: "Montserrat", sans-serif;
+  --font-for-subtitle: "Kaushan Script", cursive;
+  --font--for-text: "Roboto", sans-serif;
+}
+
+
+
+
+
+
+
+
+/* 
+body {
+  padding-top: 20px;
+  padding-bottom: 90px;
+}
+
+.wrapper-for-all-content {
+  width: 1200px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+}
+
+.logo {
+  font-size: 30px;
+  font-family: var(--font-for-menu-title-and-footer);
+  color: var(--main-icon-button-and-shadow-color);
+  margin-right: auto; 
+  Довго мучався і зрозумів, що вроді тільки так можна спозиціонувати один флекс елемент на головній осі вліво коли всі інші спозиціоновані вправо із-за justify-content:flex-end. Вова, так правильно робити?
+  flex-shrink: 0;
+  flex-grow: 0;
+  text-decoration: none;
+}
+
+. {
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding-top: 10px; 
+  Таким способом меню в хедері відцентрував. Якщо робив спочобом align-item, то ніяк не міг зробити ширину ссилки на 100%, щоб зробити бордер знизу при ховері
+}
+
+.menu__list {
+  display: flex;
+  justify-content: flex-end; 
+  Так подвинув все меню вправо
+  text-transform: uppercase;
+  height: 100%; 
+  Зробив для того, щоб бордер знизу впирався в самий низ хедера
+}
+
+.menu__item {
+  flex-basis: 10%;
+  display: flex;
+  justify-content: flex-end; 
+  Подвинув сам текст в менюшці до краю
+}
+
+.menu__link {
+  text-decoration: none;
+  color: var(--main-icon-button-and-shadow-color);
+  font-family: var(--font-for-menu-title-and-footer);
+}
+
+.menu__link:hover {
+  color: var(--main-icon-and-gradient-color);
+  border-bottom: 2px solid var(--main-icon-and-gradient-color);
+}
+
+.services {
+  margin-top: 130px;
+}
+
+.services__subtitle {
+  font-size: 24px;
+  font-family: var(--font-for-subtitle);
+  color: var(--main-title-and-subtitle-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.services__title {
+  font-size: 30px;
+  font-family: var(--font-for-menu-title-and-footer);
+  color: var(--main-title-and-subtitle-color);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services__line {
+  width: 60px;
+  border: 1px solid var(--main-icon-and-gradient-color);
+  background: var(--main-icon-and-gradient-color);
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.services__articles-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.article {
+  display: flex;
+  flex-basis: 33.3333%;
+  margin-bottom: 100px;
+}
+
+.article:nth-last-child(-n + 3) {
+  Так забрав у останніх трьох відступ накінці.
+  margin-bottom: 0;
+}
+
+.article__icon-wrapper {
+  display: flex;
+  flex: 0 0 80px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.article__title {
+  font-size: 15px;
+  font-family: var(--font-for-menu-title-and-footer);
+  color: var(--main-title-and-subtitle-color);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.article__text {
+  font-size: 14px;
+  font-family: var(--font--for-text);
+  color: var(--main-text-color);
+}
+
+.team-cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+
+.team-card {
+  flex-basis: 31%;
+}
+
+
+.team-card__image {
+  width: 100%;
+  display: block; 
+  Це задав для того, щоб прибрати дивний маленький відступ під картинкою
+}
+
+.team-card__member-name {
+  font-size: 14px;
+  font-family: var(--font-for-menu-title-and-footer);
+  font-weight: 500;
+  color: var(--main-title-and-subtitle-color);
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+}
+
+.team-card__member-position {
+  font-size: 15px;
+  font-family: var(--font--for-text);
+  color: var(--main-text-color);
+  font-style: italic;
+  text-align: center;
+  display: block;
+  margin-top: 15px;
+}
+
+.team-card__image-wrapper {
+  transition: transform 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  box-shadow: 0 0 0 0 var(--main-icon-button-and-shadow-color);
+  position: relative; 
+  Це поставив тут, бо якщо поставити на картинку, то градіент дивно трясеться при ховері
+}
+
+.team-card__image-wrapper:hover {
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 0 0 var(--main-icon-button-and-shadow-color);
+}
+
+.icons-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.2s linear 0s;
+}
+
+.team-card__image-wrapper:hover
+  .icons-wrapper {
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(252, 227, 138, 0.8) 0%,
+    rgba(243, 129, 129, 0.8) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(252, 227, 138, 0.8) 0%,
+    rgba(243, 129, 129, 0.8) 100%
+  );
+  background: -ms-linear-gradient(
+    90deg,
+    rgba(252, 227, 138, 0.8) 0%,
+    rgba(243, 129, 129, 0.8) 100%
+  );
+  opacity: 1;
+}
+
+.icons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons-wrapper__icon-link {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-icon-and-gradient-color-2);
+  transition: background-color 0.2s linear 0s;
+  margin-right: 1px;
+}
+
+.icons-wrapper__icon-link:last-child {
+  margin-right: 0;
+}
+
+.icons-wrapper__icon-link:hover {
+  background-color: var(--main-icon-button-and-shadow-color);
+} */
