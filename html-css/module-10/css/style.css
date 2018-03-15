@@ -11,27 +11,64 @@
   --font--for-text: "Roboto", sans-serif;
 }
 
-
-
-
-
-
-
-
-/* 
-body {
-  padding-top: 20px;
-  padding-bottom: 90px;
+.background-wrapper {
+  background-image: linear-gradient( to top, rgba(252,227,138, 0.8), rgba(243,129,129, 0.8)), url(../images/top-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 28px;
 }
 
 .wrapper-for-all-content {
   width: 1200px;
   margin: auto;
+  background: lightgray;
 }
 
 .header {
   display: flex;
+  justify-content: space-between;
 }
+
+.logo {
+  font-size: 30px;
+  font-family: var(--font-for-menu-title-and-footer);
+  color: var(--color-white);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu-search-and-basket-wrapper {
+  flex-basis: 52%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  background: red;
+  
+}
+
+.menu__list {
+  display: flex;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style-type: none;
+  background:blue;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: var(--color-white);
+  font-family: var(--font-for-menu-title-and-footer);
+  background: green;
+}
+
+/* 
+
+
+
+
 
 .logo {
   font-size: 30px;
