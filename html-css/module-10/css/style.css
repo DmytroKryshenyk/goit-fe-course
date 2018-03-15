@@ -46,7 +46,7 @@
 
 .menu {
   background: red;
-  
+
 }
 
 .menu__list {
@@ -64,17 +64,13 @@
   background: green;
 }
 
-/* 
 
-
-
-
-
+/*
 .logo {
   font-size: 30px;
   font-family: var(--font-for-menu-title-and-footer);
   color: var(--main-icon-button-and-shadow-color);
-  margin-right: auto; 
+  margin-right: auto;
   Довго мучався і зрозумів, що вроді тільки так можна спозиціонувати один флекс елемент на головній осі вліво коли всі інші спозиціоновані вправо із-за justify-content:flex-end. Вова, так правильно робити?
   flex-shrink: 0;
   flex-grow: 0;
@@ -84,23 +80,23 @@
 . {
   flex-shrink: 1;
   flex-grow: 1;
-  padding-top: 10px; 
+  padding-top: 10px;
   Таким способом меню в хедері відцентрував. Якщо робив спочобом align-item, то ніяк не міг зробити ширину ссилки на 100%, щоб зробити бордер знизу при ховері
 }
 
 .menu__list {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   Так подвинув все меню вправо
   text-transform: uppercase;
-  height: 100%; 
+  height: 100%;
   Зробив для того, щоб бордер знизу впирався в самий низ хедера
 }
 
 .menu__item {
   flex-basis: 10%;
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   Подвинув сам текст в менюшці до краю
 }
 
@@ -195,7 +191,7 @@
 
 .team-card__image {
   width: 100%;
-  display: block; 
+  display: block;
   Це задав для того, щоб прибрати дивний маленький відступ під картинкою
 }
 
@@ -223,7 +219,7 @@
 .team-card__image-wrapper {
   transition: transform 0.2s linear 0s, box-shadow 0.2s linear 0s;
   box-shadow: 0 0 0 0 var(--main-icon-button-and-shadow-color);
-  position: relative; 
+  position: relative;
   Це поставив тут, бо якщо поставити на картинку, то градіент дивно трясеться при ховері
 }
 
