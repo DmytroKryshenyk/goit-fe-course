@@ -11,7 +11,14 @@
   --font--for-text: "Roboto", sans-serif;
 }
 
-h, ul {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
 }
@@ -88,6 +95,10 @@ h, ul {
   line-height: 2.4;
 }
 
+.menu__link:hover {
+  color: var(--main-icon-and-gradient-color-2);
+}
+
 .menu__link--card {
   width: 18px;
   height: 18px;
@@ -117,6 +128,7 @@ h, ul {
   color: var(--color-white);
   text-align: center;
   background: grey;
+  margin-bottom: 40px;
 }
 
 .promo__title {
@@ -148,59 +160,12 @@ h, ul {
   border: 3px solid red;
 }
 
-
-
-/*
-.logo {
-  font-size: 30px;
-  font-family: var(--font-for-menu-title-and-footer);
-  color: var(--main-icon-button-and-shadow-color);
-  margin-right: auto;
-  Довго мучався і зрозумів, що вроді тільки так можна спозиціонувати один флекс елемент на головній осі вліво коли всі інші спозиціоновані вправо із-за justify-content:flex-end. Вова, так правильно робити?
-  flex-shrink: 0;
-  flex-grow: 0;
-  text-decoration: none;
-}
-
-. {
-  flex-shrink: 1;
-  flex-grow: 1;
-  padding-top: 10px;
-  Таким способом меню в хедері відцентрував. Якщо робив спочобом align-item, то ніяк не міг зробити ширину ссилки на 100%, щоб зробити бордер знизу при ховері
-}
-
-.menu__list {
-  display: flex;
-  justify-content: flex-end;
-  Так подвинув все меню вправо
-  text-transform: uppercase;
-  height: 100%;
-  Зробив для того, щоб бордер знизу впирався в самий низ хедера
-}
-
-.menu__item {
-  flex-basis: 10%;
-  display: flex;
-  justify-content: flex-end;
-  Подвинув сам текст в менюшці до краю
-}
-
-.menu__link {
-  text-decoration: none;
-  color: var(--main-icon-button-and-shadow-color);
-  font-family: var(--font-for-menu-title-and-footer);
-}
-
-.menu__link:hover {
-  color: var(--main-icon-and-gradient-color);
-  border-bottom: 2px solid var(--main-icon-and-gradient-color);
-}
-
 .services {
-  margin-top: 130px;
+  margin-top: 45px;
+  margin-bottom: 80px;
 }
 
-.services__subtitle {
+.services-and-team__subtitle {
   font-size: 24px;
   font-family: var(--font-for-subtitle);
   color: var(--main-title-and-subtitle-color);
@@ -208,7 +173,7 @@ h, ul {
   margin-bottom: 15px;
 }
 
-.services__title {
+.services-and-team__title {
   font-size: 30px;
   font-family: var(--font-for-menu-title-and-footer);
   color: var(--main-title-and-subtitle-color);
@@ -218,50 +183,84 @@ h, ul {
   margin-bottom: 40px;
 }
 
-.services__line {
-  width: 60px;
-  border: 1px solid var(--main-icon-and-gradient-color);
-  background: var(--main-icon-and-gradient-color);
+.line {
   margin: auto;
   margin-bottom: 60px;
+  position: relative;
+}
+
+.line::before {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: var(--main-icon-and-gradient-color);
+  position: absolute;
+  left: calc(50% - 30px);
 }
 
 .services__articles-wrapper {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
+  background: lightcyan;
 }
 
 .article {
   display: flex;
-  flex-basis: 33.3333%;
+  flex-basis: 28%;
   margin-bottom: 100px;
+  background: lightsalmon;
 }
 
 .article:nth-last-child(-n + 3) {
-  Так забрав у останніх трьох відступ накінці.
   margin-bottom: 0;
 }
 
 .article__icon-wrapper {
   display: flex;
-  flex: 0 0 80px;
+  flex-basis: 25%;
   justify-content: center;
-  align-items: flex-start;
+}
+
+.article__title-and-text-wrapper {
+  background: lightgray;
 }
 
 .article__title {
-  font-size: 15px;
+  font-size: 14px;
   font-family: var(--font-for-menu-title-and-footer);
   color: var(--main-title-and-subtitle-color);
   text-transform: uppercase;
   margin-bottom: 20px;
+  background: lightgreen;
 }
 
 .article__text {
-  font-size: 14px;
+  font-size: 15px;
   font-family: var(--font--for-text);
   color: var(--main-text-color);
+  background: lightgreen;
+  line-height: 1.6;
 }
+
+.team {
+  outline: 2px solid red;
+}
+
+.team__text {
+  font-size: 15px;
+  font-family: var(--font--for-text);
+  color: var(--main-text-color);
+  line-height: 1.6;
+  text-align: center;
+  width: 980px;
+  margin: auto;
+  margin-top: 40px;
+  background: lawngreen;
+}
+
+/*
+
 
 .team-cards-wrapper {
   display: flex;
