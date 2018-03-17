@@ -4,6 +4,7 @@
   --main-icon-button-and-shadow-color: #95e1d3;
   --main-icon-and-gradient-color: #f38181;
   --main-icon-and-gradient-color-2: #fce38a;
+  --footer-border-color: #e5e5e5;
   --color-white: #ffffff;
   --color-black: #000000;
   --font-for-menu-title-and-footer: "Montserrat", sans-serif;
@@ -24,6 +25,25 @@ p {
 }
 
 .background-wrapper {
+  background-image: -webkit-gradient(
+      linear,
+      left bottom, left top,
+      from(rgba(252, 227, 138, 0.8)),
+      to(rgba(243, 129, 129, 0.8))
+    ),
+    url(../images/top-background.jpg);
+  background-image: -webkit-linear-gradient(
+      bottom,
+      rgba(252, 227, 138, 0.8),
+      rgba(243, 129, 129, 0.8)
+    ),
+    url(../images/top-background.jpg);
+  background-image: -o-linear-gradient(
+      bottom,
+      rgba(252, 227, 138, 0.8),
+      rgba(243, 129, 129, 0.8)
+    ),
+    url(../images/top-background.jpg);
   background-image: linear-gradient(
       to top,
       rgba(252, 227, 138, 0.8),
@@ -35,18 +55,21 @@ p {
   background-size: cover;
   padding-top: 28px;
   padding-bottom: 230px;
+  min-width: 1200px;
 }
 
 .wrapper-for-all-content {
   width: 1200px;
   margin: auto;
-  background: lightgray;
 }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  background: lightgreen;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 170px;
 }
 
@@ -59,27 +82,28 @@ p {
 }
 
 .menu {
-  background: red;
-  flex-basis: 52%;
+  -ms-flex-preferred-size: 52%;
+      flex-basis: 52%;
 }
 
 .menu__list {
   text-transform: uppercase;
   text-decoration: none;
   list-style-type: none;
-  background: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0;
 }
 
 .menu__item {
-  height: 100%;
-  background: pink;
   border-bottom: 3px solid transparent;
-  box-sizing: border-box;
 }
 
 .menu__item:hover {
@@ -91,7 +115,6 @@ p {
   color: var(--color-white);
   font-family: var(--font-for-menu-title-and-footer);
   display: inline-block; /*Задаю, щоб могти дати висоту*/
-  background: green;
   line-height: 2.4;
 }
 
@@ -119,7 +142,6 @@ p {
 .promo {
   width: 820px;
   margin: auto;
-  background: lightgoldenrodyellow;
 }
 
 .promo__subtitle {
@@ -127,7 +149,6 @@ p {
   font-family: var(--font-for-subtitle);
   color: var(--color-white);
   text-align: center;
-  background: grey;
   margin-bottom: 40px;
 }
 
@@ -140,7 +161,6 @@ p {
   text-align: center;
   line-height: 0.933;
   margin-bottom: 126px;
-  background: lightgrey;
 }
 
 .promo__button {
@@ -151,13 +171,12 @@ p {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  background: grey;
   display: block;
   height: 34px;
   width: 154px;
   margin: auto;
   line-height: 2.5;
-  border: 3px solid red;
+  border: 3px solid var(--color-white);
 }
 
 .services {
@@ -185,31 +204,40 @@ p {
 
 .line {
   margin: auto;
-  margin-bottom: 60px;
   position: relative;
+  height: 1px;
 }
 
-.line::before {
+.line::after {
   content: "";
   width: 60px;
   height: 3px;
   background: var(--main-icon-and-gradient-color);
   position: absolute;
-  left: calc(50% - 30px);
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .services__articles-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  background: lightcyan;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 60px;
 }
 
 .article {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-basis: 28%;
+  -ms-flex-preferred-size: 28%;
+      flex-basis: 28%;
   margin-bottom: 100px;
-  background: lightsalmon;
 }
 
 .article:nth-last-child(-n + 3) {
@@ -217,13 +245,14 @@ p {
 }
 
 .article__icon-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-basis: 25%;
-  justify-content: center;
-}
-
-.article__title-and-text-wrapper {
-  background: lightgray;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .article__title {
@@ -232,19 +261,17 @@ p {
   color: var(--main-title-and-subtitle-color);
   text-transform: uppercase;
   margin-bottom: 20px;
-  background: lightgreen;
 }
 
 .article__text {
   font-size: 15px;
   font-family: var(--font--for-text);
   color: var(--main-text-color);
-  background: lightgreen;
   line-height: 1.6;
 }
 
 .team {
-  outline: 2px solid red;
+  margin-bottom: 80px;
 }
 
 .team__text {
@@ -255,80 +282,72 @@ p {
   text-align: center;
   width: 980px;
   margin: auto;
-  margin-top: 40px;
-  background: lawngreen;
+  margin-bottom: 90px;
+  margin-top: 45px;
 }
 
-/*
-
-
 .team-cards-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  margin-top: 90px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .team-card {
-  flex-basis: 31%;
+  -ms-flex-preferred-size: 31.6666%;
+      flex-basis: 31.6666%;
 }
-
 
 .team-card__image {
-  width: 100%;
   display: block;
-  Це задав для того, щоб прибрати дивний маленький відступ під картинкою
-}
-
-.team-card__member-name {
-  font-size: 14px;
-  font-family: var(--font-for-menu-title-and-footer);
-  font-weight: 500;
-  color: var(--main-title-and-subtitle-color);
-  text-transform: uppercase;
-  text-align: center;
-  display: block;
-  margin-top: 30px;
-}
-
-.team-card__member-position {
-  font-size: 15px;
-  font-family: var(--font--for-text);
-  color: var(--main-text-color);
-  font-style: italic;
-  text-align: center;
-  display: block;
-  margin-top: 15px;
+  max-width: 100%;
+  height: auto;
 }
 
 .team-card__image-wrapper {
+  -webkit-transition: -webkit-transform 0.2s linear 0s, -webkit-box-shadow 0.2s linear 0s;
+  transition: -webkit-transform 0.2s linear 0s, -webkit-box-shadow 0.2s linear 0s;
+  -o-transition: transform 0.2s linear 0s, box-shadow 0.2s linear 0s;
   transition: transform 0.2s linear 0s, box-shadow 0.2s linear 0s;
-  box-shadow: 0 0 0 0 var(--main-icon-button-and-shadow-color);
+  transition: transform 0.2s linear 0s, box-shadow 0.2s linear 0s, -webkit-transform 0.2s linear 0s, -webkit-box-shadow 0.2s linear 0s;
+  -webkit-box-shadow: 0 0 0 0 var(--main-icon-button-and-shadow-color);
+          box-shadow: 0 0 0 0 var(--main-icon-button-and-shadow-color);
   position: relative;
-  Це поставив тут, бо якщо поставити на картинку, то градіент дивно трясеться при ховері
+  /* Це поставив тут, бо якщо поставити на картинку, то градіент дивно трясеться при ховері */
 }
 
 .team-card__image-wrapper:hover {
-  transform: translate(-10px, -10px);
-  box-shadow: 10px 10px 0 0 var(--main-icon-button-and-shadow-color);
+  -webkit-transform: translate(-10px, -10px);
+      -ms-transform: translate(-10px, -10px);
+          transform: translate(-10px, -10px);
+  -webkit-box-shadow: 10px 10px 0 0 var(--main-icon-button-and-shadow-color);
+          box-shadow: 10px 10px 0 0 var(--main-icon-button-and-shadow-color);
 }
 
-.icons-wrapper {
+.team-card__image-hover-layer {
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   opacity: 0;
+  -webkit-transition: opacity 0.2s linear 0s;
+  -o-transition: opacity 0.2s linear 0s;
   transition: opacity 0.2s linear 0s;
 }
 
-.team-card__image-wrapper:hover
-  .icons-wrapper {
-  background: -moz-linear-gradient(
-    90deg,
-    rgba(252, 227, 138, 0.8) 0%,
-    rgba(243, 129, 129, 0.8) 100%
-  );
+.team-card__image-wrapper:hover .team-card__image-hover-layer {
   background: -webkit-linear-gradient(
     90deg,
     rgba(252, 227, 138, 0.8) 0%,
@@ -343,26 +362,139 @@ p {
 }
 
 .icons-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: var(--main-icon-and-gradient-color);
 }
 
 .icons-wrapper__icon-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 55px;
   height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--main-icon-and-gradient-color-2);
-  transition: background-color 0.2s linear 0s;
-  margin-right: 1px;
-}
-
-.icons-wrapper__icon-link:last-child {
-  margin-right: 0;
+  fill: var(--main-icon-and-gradient-color);
 }
 
 .icons-wrapper__icon-link:hover {
-  background-color: var(--main-icon-button-and-shadow-color);
-} */
+  background-color: var(--main-icon-and-gradient-color);
+  fill: var(--color-white);
+}
+
+.icons-wrapper__icon-link:not(:last-child) {
+  margin-right: -3px;
+}
+
+.team-card__member-name {
+  font-size: 14px;
+  font-family: var(--font-for-menu-title-and-footer);
+  font-weight: 600;
+  color: var(--main-title-and-subtitle-color);
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+}
+
+.team-card__member-position {
+  font-size: 15px;
+  font-family: var(--font--for-text);
+  color: var(--main-text-color);
+  font-style: italic;
+  text-align: center;
+  line-height: 1.6;
+  display: block;
+  margin-top: 15px;
+}
+
+.footer {
+  padding: 10px 0;
+  border-top: 1px solid var(--footer-border-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.copyright {
+  font-size: 14px;
+  font-family: var(--font-for-menu-title-and-footer);
+  color: var(--main-title-and-subtitle-color);
+  font-weight: 500;;
+}
+
+.copyright__company-name {
+  color: var(--main-icon-and-gradient-color);
+}
+
+.subscribe-form__text-input {
+  font-size: 15px;
+  font-family: var(--font--for-text);
+  font-style: italic;
+  height: 40px;
+  width: 230px;
+  border: 1px solid var(--footer-border-color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-right: -5px;
+  padding-left: 10px;
+}
+
+.subscribe-form__button {
+background-color: var(--main-icon-button-and-shadow-color);
+height: 40px;
+width: 150px;
+border: 0;
+font-size: 14px;
+font-family: var(--font-for-menu-title-and-footer);
+font-weight: bold;
+color: var(--color-white);
+text-transform: uppercase;
+line-height: 3;
+}
+
+
+/* MEDIA */
+
+@media (-webkit-min-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .background-wrapper {
+    background-image: -webkit-gradient(
+        linear,
+        left bottom, left top,
+        from(rgba(252, 227, 138, 0.8)),
+        to(rgba(243, 129, 129, 0.8))
+      ),
+      url(../images/top-background-x2.jpg);
+    background-image: -webkit-linear-gradient(
+        bottom,
+        rgba(252, 227, 138, 0.8),
+        rgba(243, 129, 129, 0.8)
+      ),
+      url(../images/top-background-x2.jpg);
+    background-image: -o-linear-gradient(
+        bottom,
+        rgba(252, 227, 138, 0.8),
+        rgba(243, 129, 129, 0.8)
+      ),
+      url(../images/top-background-x2.jpg);
+    background-image: linear-gradient(
+        to top,
+        rgba(252, 227, 138, 0.8),
+        rgba(243, 129, 129, 0.8)
+      ),
+      url(../images/top-background-x2.jpg);
+  }
+}
