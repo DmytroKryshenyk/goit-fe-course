@@ -377,20 +377,6 @@ template {
   display: none;
 }
 
-:root {
-  --main-title-and-subtitle-color: #333333;
-  --main-text-color: #999999;
-  --main-icon-button-and-shadow-color: #95e1d3;
-  --main-icon-and-gradient-color: #f38181;
-  --main-icon-and-gradient-color-2: #fce38a;
-  --footer-border-color: #e5e5e5;
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --font-for-menu-title-and-footer: "Montserrat", sans-serif;
-  --font-for-subtitle: "Kaushan Script", cursive;
-  --font--for-text: "Roboto", sans-serif;
-}
-
 h1,
 h2,
 h3,
@@ -426,8 +412,8 @@ p {
 
 .logo {
   font-size: 30px;
-  font-family: var(--font-for-menu-title-and-footer);
-  color: var(--color-white);
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
   font-weight: bold;
   text-decoration: none;
 }
@@ -451,20 +437,20 @@ p {
 }
 
 .menu__item:hover {
-  border-bottom: 3px solid var(--main-icon-and-gradient-color-2);
+  border-bottom: 3px solid #fce38a;
 }
 
 .menu__link {
   text-decoration: none;
-  color: var(--color-white);
-  font-family: var(--font-for-menu-title-and-footer);
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
   display: inline-block;
   /*Задаю, щоб могти дати висоту*/
   line-height: 2.4;
 }
 
 .menu__link:hover {
-  color: var(--main-icon-and-gradient-color-2);
+  color: #fce38a;
 }
 
 .menu__link--card {
@@ -492,16 +478,16 @@ p {
 
 .promo__subtitle {
   font-size: 72px;
-  font-family: var(--font-for-subtitle);
-  color: var(--color-white);
+  font-family: "Kaushan Script", cursive;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 40px;
 }
 
 .promo__title {
   font-size: 150px;
-  font-family: var(--font-for-menu-title-and-footer);
-  color: var(--color-white);
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -511,8 +497,8 @@ p {
 
 .promo__button {
   font-size: 14px;
-  font-family: var(--font-for-menu-title-and-footer);
-  color: var(--color-white);
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
@@ -522,7 +508,7 @@ p {
   width: 154px;
   margin: auto;
   line-height: 2.5;
-  border: 3px solid var(--color-white);
+  border: 3px solid #ffffff;
 }
 
 .wrapper-for-all-blocks-bellow-promo-block {
@@ -535,16 +521,16 @@ p {
 
 .services__subtitle {
   font-size: 24px;
-  font-family: var(--font-for-subtitle);
-  color: var(--main-title-and-subtitle-color);
+  font-family: "Kaushan Script", cursive;
+  color: #333333;
   text-align: center;
   margin-bottom: 15px;
 }
 
 .services__title {
   font-size: 30px;
-  font-family: var(--font-for-menu-title-and-footer);
-  color: var(--main-title-and-subtitle-color);
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -556,7 +542,7 @@ p {
   content: "";
   width: 60px;
   height: 3px;
-  background: var(--main-icon-and-gradient-color);
+  background: #f38181;
   position: absolute;
   left: 50%;
   bottom: -40px;
@@ -594,16 +580,16 @@ p {
 
 .article__title {
   font-size: 14px;
-  font-family: var(--font-for-menu-title-and-footer);
-  color: var(--main-title-and-subtitle-color);
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
 .article__text {
   font-size: 15px;
-  font-family: var(--font--for-text);
-  color: var(--main-text-color);
+  font-family: "Roboto", sans-serif;
+  color: #999999;
   line-height: 1.6;
 }
 
@@ -613,16 +599,16 @@ p {
 
 .team__subtitle {
   font-size: 24px;
-  font-family: var(--font-for-subtitle);
-  color: var(--main-title-and-subtitle-color);
+  font-family: "Kaushan Script", cursive;
+  color: #333333;
   text-align: center;
   margin-bottom: 15px;
 }
 
 .team__title {
   font-size: 30px;
-  font-family: var(--font-for-menu-title-and-footer);
-  color: var(--main-title-and-subtitle-color);
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -634,7 +620,7 @@ p {
   content: "";
   width: 60px;
   height: 3px;
-  background: var(--main-icon-and-gradient-color);
+  background: #f38181;
   position: absolute;
   left: 50%;
   bottom: -40px;
@@ -644,8 +630,8 @@ p {
 
 .team__text {
   font-size: 15px;
-  font-family: var(--font--for-text);
-  color: var(--main-text-color);
+  font-family: "Roboto", sans-serif;
+  color: #999999;
   line-height: 1.6;
   text-align: center;
   width: 980px;
@@ -673,14 +659,14 @@ p {
   transition: box-shadow 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
   transition: transform 0.2s linear 0s, box-shadow 0.2s linear 0s;
   transition: transform 0.2s linear 0s, box-shadow 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
-  box-shadow: 0 0 0 0 var(--main-icon-button-and-shadow-color);
+  box-shadow: 0 0 0 0 #95e1d3;
   position: relative;
 }
 
 .team-card__image-wrapper:hover {
   -webkit-transform: translate(-10px, -10px);
   transform: translate(-10px, -10px);
-  box-shadow: 10px 10px 0 0 var(--main-icon-button-and-shadow-color);
+  box-shadow: 10px 10px 0 0 #95e1d3;
 }
 
 .team-card__image-hover-layer {
@@ -702,7 +688,7 @@ p {
 }
 
 .icons-wrapper {
-  background: var(--main-icon-and-gradient-color);
+  background: #f38181;
 }
 
 .icons-wrapper__icon-link {
@@ -711,13 +697,13 @@ p {
   align-items: center;
   width: 55px;
   height: 55px;
-  background-color: var(--main-icon-and-gradient-color-2);
-  fill: var(--main-icon-and-gradient-color);
+  background-color: #fce38a;
+  fill: #f38181;
 }
 
 .icons-wrapper__icon-link:hover {
-  background-color: var(--main-icon-and-gradient-color);
-  fill: var(--color-white);
+  background-color: #f38181;
+  fill: #ffffff;
 }
 
 .icons-wrapper__icon-link:not(:last-child) {
@@ -726,9 +712,9 @@ p {
 
 .team-card__member-name {
   font-size: 14px;
-  font-family: var(--font-for-menu-title-and-footer);
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: var(--main-title-and-subtitle-color);
+  color: #333333;
   text-transform: uppercase;
   text-align: center;
   display: block;
@@ -737,8 +723,8 @@ p {
 
 .team-card__member-position {
   font-size: 15px;
-  font-family: var(--font--for-text);
-  color: var(--main-text-color);
+  font-family: "Roboto", sans-serif;
+  color: #999999;
   font-style: italic;
   text-align: center;
   line-height: 1.6;
@@ -748,7 +734,7 @@ p {
 
 .footer {
   padding: 10px 0;
-  border-top: 1px solid var(--footer-border-color);
+  border-top: 1px solid #e5e5e5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -756,36 +742,36 @@ p {
 
 .copyright {
   font-size: 14px;
-  font-family: var(--font-for-menu-title-and-footer);
-  color: var(--main-title-and-subtitle-color);
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
   font-weight: 500;
 }
 
 .copyright__company-name {
-  color: var(--main-icon-and-gradient-color);
+  color: #f38181;
 }
 
 .subscribe-form__text-input {
   font-size: 15px;
-  font-family: var(--font--for-text);
+  font-family: "Roboto", sans-serif;
   font-style: italic;
   height: 40px;
   width: 230px;
-  border: 1px solid var(--footer-border-color);
+  border: 1px solid #e5e5e5;
   box-sizing: border-box;
   margin-right: -5px;
   padding-left: 10px;
 }
 
 .subscribe-form__button {
-  background-color: var(--main-icon-button-and-shadow-color);
+  background-color: #95e1d3;
   height: 40px;
   width: 150px;
   border: 0;
   font-size: 14px;
-  font-family: var(--font-for-menu-title-and-footer);
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  color: var(--color-white);
+  color: #ffffff;
   text-transform: uppercase;
   line-height: 3;
 }

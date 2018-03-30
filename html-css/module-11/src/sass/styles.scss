@@ -1,7 +1,7 @@
 /*
    Import partials below
 */
-@import 'normalize';
+@import "normalize";
 
 $main-title-and-subtitle-color: #333333;
 $main-text-color: #999999;
@@ -108,10 +108,10 @@ p {
 
 .menu__item {
   border-bottom: 3px solid transparent;
-}
 
-.menu__item:hover {
-  border-bottom: 3px solid $main-icon-and-gradient-color-2;
+  &:hover {
+    border-bottom: 3px solid $main-icon-and-gradient-color-2;
+  }
 }
 
 .menu__link {
@@ -120,10 +120,10 @@ p {
   font-family: $font-for-menu-title-and-footer;
   display: inline-block; /*Задаю, щоб могти дати висоту*/
   line-height: 2.4;
-}
 
-.menu__link:hover {
-  color: $main-icon-and-gradient-color-2;
+  &:hover {
+    color: $main-icon-and-gradient-color-2;
+  }
 }
 
 .menu__link--card {
@@ -210,7 +210,6 @@ p {
   position: relative;
 }
 
-
 .services__title::after {
   content: "";
   width: 60px;
@@ -294,7 +293,7 @@ p {
 .team__title {
   font-size: 30px;
   font-family: $font-for-menu-title-and-footer;
-  color: $main-title-and-subtitle-color);
+  color: $main-title-and-subtitle-color;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -359,16 +358,17 @@ p {
   -webkit-box-shadow: 0 0 0 0 $main-icon-button-and-shadow-color;
   box-shadow: 0 0 0 0 $main-icon-button-and-shadow-color;
   position: relative;
-}
-// Це поставив тут, бо якщо поставити на картинку, то градіент дивно трясеться при ховері
 
-.team-card__image-wrapper:hover {
-  -webkit-transform: translate(-10px, -10px);
-  -ms-transform: translate(-10px, -10px);
-  transform: translate(-10px, -10px);
-  -webkit-box-shadow: 10px 10px 0 0 $main-icon-button-and-shadow-color;
-  box-shadow: 10px 10px 0 0 $main-icon-button-and-shadow-color;
+  &:hover {
+    -webkit-transform: translate(-10px, -10px);
+    -ms-transform: translate(-10px, -10px);
+    transform: translate(-10px, -10px);
+    -webkit-box-shadow: 10px 10px 0 0 $main-icon-button-and-shadow-color;
+    box-shadow: 10px 10px 0 0 $main-icon-button-and-shadow-color;
+  }
 }
+// Цей ховер поставив тут, бо якщо поставити на картинку, то градіент дивно трясеться при ховері
+
 
 .team-card__image-hover-layer {
   position: absolute;
@@ -423,11 +423,11 @@ p {
   height: 55px;
   background-color: $main-icon-and-gradient-color-2;
   fill: $main-icon-and-gradient-color;
-}
 
-.icons-wrapper__icon-link:hover {
-  background-color: $main-icon-and-gradient-color;
-  fill: $color-white;
+  &:hover {
+    background-color: $main-icon-and-gradient-color;
+    fill: $color-white;
+  }
 }
 
 .icons-wrapper__icon-link:not(:last-child) {
