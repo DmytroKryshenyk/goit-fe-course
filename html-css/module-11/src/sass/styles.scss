@@ -365,7 +365,16 @@ p {
     transform: translate(-10px, -10px);
     -webkit-box-shadow: 10px 10px 0 0 $main-icon-button-and-shadow-color;
     box-shadow: 10px 10px 0 0 $main-icon-button-and-shadow-color;
-  }
+    background: -webkit-linear-gradient(
+      90deg,
+      rgba(252, 227, 138, 0.8) 0%,
+      rgba(243, 129, 129, 0.8) 100%
+    );
+    background: -ms-linear-gradient(
+      90deg,
+      rgba(252, 227, 138, 0.8) 0%,
+      rgba(243, 129, 129, 0.8) 100%
+    );}
 }
 // Цей ховер поставив тут, бо якщо поставити на картинку, то градіент дивно трясеться при ховері
 
@@ -389,21 +398,27 @@ p {
   -webkit-transition: opacity 0.2s linear 0s;
   -o-transition: opacity 0.2s linear 0s;
   transition: opacity 0.2s linear 0s;
-}
-
-.team-card__image-wrapper:hover .team-card__image-hover-layer {
+  background: linear-gradient(
+    0deg,
+    rgba(252, 227, 138, 0.8) 0%,
+    rgba(243, 129, 129, 0.8) 100%
+  );
   background: -webkit-linear-gradient(
-    90deg,
+    0deg,
     rgba(252, 227, 138, 0.8) 0%,
     rgba(243, 129, 129, 0.8) 100%
   );
   background: -ms-linear-gradient(
-    90deg,
+    0deg,
     rgba(252, 227, 138, 0.8) 0%,
     rgba(243, 129, 129, 0.8) 100%
   );
-  opacity: 1;
+
+  &:hover {
+    opacity: 1;
+  }
 }
+
 
 .icons-wrapper {
   background: $main-icon-and-gradient-color;

@@ -667,6 +667,7 @@ p {
   -webkit-transform: translate(-10px, -10px);
   transform: translate(-10px, -10px);
   box-shadow: 10px 10px 0 0 #95e1d3;
+  background: -ms-linear-gradient(90deg, rgba(252, 227, 138, 0.8) 0%, rgba(243, 129, 129, 0.8) 100%);
 }
 
 .team-card__image-hover-layer {
@@ -680,10 +681,11 @@ p {
   align-items: center;
   opacity: 0;
   transition: opacity 0.2s linear 0s;
+  background: linear-gradient(0deg, rgba(252, 227, 138, 0.8) 0%, rgba(243, 129, 129, 0.8) 100%);
+  background: -ms-linear-gradient(0deg, rgba(252, 227, 138, 0.8) 0%, rgba(243, 129, 129, 0.8) 100%);
 }
 
-.team-card__image-wrapper:hover .team-card__image-hover-layer {
-  background: -ms-linear-gradient(90deg, rgba(252, 227, 138, 0.8) 0%, rgba(243, 129, 129, 0.8) 100%);
+.team-card__image-hover-layer:hover {
   opacity: 1;
 }
 
